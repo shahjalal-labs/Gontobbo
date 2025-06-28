@@ -19,11 +19,15 @@ const Banner = () => {
           <img
             src={slide.image}
             alt={slide.title}
-            className="object-cover h-[500px] w-full rounded-2xl"
+            className="object-cover h-[350px] sm:h-[500px] w-full rounded-2xl"
           />
-          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-6 rounded-2xl">
-            <h2 className="text-4xl font-bold mb-2">{slide.title}</h2>
-            <p className="text-lg max-w-2xl">{slide.description}</p>
+          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center  text-center px-6 rounded-2xl">
+            <h2 className="text-4xl font-bold mb-2 text-cyan-200">
+              {slide.title}
+            </h2>
+            <p className="text-lg max-w-2xl text-blue-200">
+              {slide.description}
+            </p>
           </div>
         </div>
       ))}

@@ -11,8 +11,8 @@ import {
 const brands = [abbott, activision, logmein, nike, openjsfoundation, tech];
 const ClientLogosMarquee = () => {
   return (
-    <div className="py-16 bg-base-200">
-      <h1 className="text-center text-xl md:text-3xl font-bold text-primary mb-4 font-kaushan mb-8">
+    <div className="py-16 bg-gradient-to-r from-cyan-200/10 via-sky-200/30 via-blue-300/50 via-orange-400/90 to-purple-200/30 shadow-md">
+      <h1 className="text-center text-xl md:text-3xl font-bold text-cyan-500 mb-4 font-kaushan mb-8">
         Powered by Partnerships Nationwide.
       </h1>
 

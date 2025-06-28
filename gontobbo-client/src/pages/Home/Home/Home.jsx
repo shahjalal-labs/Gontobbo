@@ -1,13 +1,19 @@
-import Banner from "../Banner/Banner";
-import ClientLogosMarquee from "../ClientLogosMarquee/ClientLogosMarquee";
-import Services from "../Services/Services";
+import {
+  Banner,
+  BeMerchant,
+  Benefits,
+  ClientLogosMarquee,
+  Services,
+} from "./import";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mt-3">
       <Banner />
       <Services />
       <ClientLogosMarquee />
+      <Benefits />
+      <BeMerchant />
     </div>
   );
 };

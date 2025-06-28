@@ -3,7 +3,7 @@ import BrandLogo from "../BrandLogo/BrandLogo";
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-zinc-900  p-4 sm:p-10  text-zinc-300">
+    <footer className="footer sm:footer-horizontal   max-xl:px-4 sm:py-28  text-zinc-300  max-w-7xl mx-auto">
       <aside>
         <BrandLogo />
         <p>Providing reliable courier services</p>

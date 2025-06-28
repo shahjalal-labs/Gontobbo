@@ -4,13 +4,18 @@ import Footer from "../pages/shared/Footer/Footer";
 
 const RootLayout = () => {
   return (
-    <div>
-      <Navbar />
-      <div className="min-h-[70vh]">
-        <Outlet />
+    <>
+      <div className="max-w-7xl mx-auto">
+        <Navbar />
+        <div className="min-h-[70vh]">
+          <Outlet />
+        </div>
       </div>
-      <Footer />
-    </div>
+
+      <div className="bg bg-zinc-900">
+        <Footer />
+      </div>
+    </>
   );
 };
 

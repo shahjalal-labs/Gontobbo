@@ -9,7 +9,7 @@ export const navItems = (
       <Link to="/about-us">About Us</Link>
     </li>
     <li>
-      <a>Item 3</a>
+      <Link to="/about-us">About Us</Link>
     </li>
   </>
 );
