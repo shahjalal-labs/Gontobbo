@@ -6,6 +6,8 @@ import BeMerchant from "./BeMerchant/BeMerchant";
 import location from "../../../assets/images/location.jpg";
 import locationRounded from "../../../assets/images/locationRounded.png";
 import locationRoundedRemovebg from "../../../assets/images/locationRounded-removebg.png";
+import bgDesign from "../../../assets/images/bgDesign.jpg";
+import footerDesign from "../../../assets/images/footerBg.jpg";
 
 export {
   Banner,
@@ -16,4 +18,6 @@ export {
   location,
   locationRounded,
   locationRoundedRemovebg,
+  bgDesign,
+  footerDesign,
 };

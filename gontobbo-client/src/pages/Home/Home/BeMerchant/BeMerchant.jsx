@@ -1,22 +1,29 @@
-import { location, locationRounded, locationRoundedRemovebg } from "../import";
+import { bgDesign, locationRoundedRemovebg } from "../import";
 
 const BeMerchant = () => {
   return (
-    <div className="">
+    <div
+      className=""
+      style={{
+        backgroundImage: `url(${bgDesign})`,
+      }}
+    >
       <h1 className="title text-blue-400 mb-4 font-kaushan mb-8 p-2">
         🚀 Become a Gontobbo Partner — Reach Every District!!!
       </h1>
 
       <div
         data-aos="zoom-in-up"
-        className="bg-cyan-800 p-8 sm:p-18 rounded-2xl"
+        className="bg-cyan-800/50 p-8 sm:p-18 rounded-2xl"
       >
         <div
           className="
-              flex flex-col lg:flex-row-reverse items-center justify-center gap-7
-              "
+              flex flex-col lg:flex-row-reverse items-center justify-around gap-7 "
         >
-          <img src={locationRoundedRemovebg} className="w-[400px]" />
+          <img
+            src={locationRoundedRemovebg}
+            className="w-[350px] max-sm:w-[300px]"
+          />
 
           <div>
             <h2 className="title text-purple-950 font-courgette">

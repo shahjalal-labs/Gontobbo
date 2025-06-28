@@ -12,7 +12,7 @@ const RootLayout = () => {
         </div>
       </div>
 
-      <div className="bg bg-zinc-900">
+      <div className="bg bg-zinc-950">
         <Footer />
       </div>
     </>
