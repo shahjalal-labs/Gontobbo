@@ -19,7 +19,12 @@ const ClientLogosMarquee = () => {
       <Marquee speed={50} pauseOnHover>
         <div className="flex flex-rap justify-around gap-[30x] w-[700px]  sm:w-[750px] md:w-[1000px]">
           {brands.map((brand) => (
-            <img src={brand} alt="brand" className="w-20 h-20 mx-auto" />
+            <img
+              src={brand}
+              alt="brand"
+              key={brand}
+              className="w-20 h-20 mx-auto"
+            />
           ))}
         </div>
       </Marquee>

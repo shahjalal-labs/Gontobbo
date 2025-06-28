@@ -20,7 +20,7 @@ const benefits = [
     title: "Lightning Fast Urban Express",
     description:
       "Intra-city express delivery in under 6 hours with dedicated high-speed riders. Gontobbo turns every second into speed, keeping your delivery ahead of the clock.",
-    image: "",
+    image: "url",
   },
   {
     id: 4,
