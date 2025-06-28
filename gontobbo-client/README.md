@@ -36,35 +36,34 @@
 <!---->
 <!-- ![Screenshot](src/assets/screenshots/ss-10-25-39-AM_28-06-25.png) -->
 
-### 📝 Home Page Mobile Preview under 70% tab zoom:
+### 📝 Home Page Mobile Preview:
 
-![Screenshot](src/assets/screenshots/ss-10-41-19-AM_28-06-25.png)
+<!-- ![Screenshot](src/assets/screenshots/ss-10-41-19-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-46-00-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-46-22-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-46-48-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-47-08-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-47-26-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-47-44-AM_28-06-25.png) -->
 
-![Screenshot](src/assets/screenshots/ss-10-46-00-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-46-22-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-46-48-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-47-08-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-47-26-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-47-44-AM_28-06-25.png)
+![Screenshot](src/assets/screenshots/preview/mobilePreview.png)
 
 ### 📝 Home Page Laptop Preview for 1280px:
 
-![Screenshot](src/assets/screenshots/ss-11-26-15-AM_28-06-25.png)
+<!-- ![Screenshot](src/assets/screenshots/ss-11-26-15-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-11-26-35-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-11-26-58-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-11-27-22-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-11-27-45-AM_28-06-25.png) -->
 
-![Screenshot](src/assets/screenshots/ss-11-26-35-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-11-26-58-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-11-27-22-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-11-27-45-AM_28-06-25.png)
-
-## full page through ss
-
-![Screenshot](src/assets/screenshots/fullpage.png)
-![Screenshot](src/assets/screenshots/mobileviewFullpage.png)
+![Screenshot](src/assets/screenshots/preview/laptopPreview.png)
