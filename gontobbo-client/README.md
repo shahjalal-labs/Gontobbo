@@ -61,3 +61,5 @@
 ![Screenshot](src/assets/screenshots/ss-11-27-22-AM_28-06-25.png)
 
 ![Screenshot](src/assets/screenshots/ss-11-27-45-AM_28-06-25.png)
+
+#### checking auto ai push with commit message
