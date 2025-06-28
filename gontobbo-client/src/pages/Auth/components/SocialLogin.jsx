@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from "react-router";
 import Swal from "sweetalert2";
+import useAuth from "../../../hooks/useAuth";
+import { Facebook, Github } from "lucide-react";
 
 const SocialLogin = () => {
   const { googleSignIn } = useAuth();
@@ -62,12 +64,12 @@ const SocialLogin = () => {
           </svg>
           Google
         </button>
-        <Button className="btn-neutral">
+        <button className="btn-neutral">
           <Github /> Github
-        </Button>
-        <Button className="btn-info">
+        </button>
+        <button className="btn-info">
           <Facebook /> Facebook
-        </Button>
+        </button>
       </div>
     </div>
   );

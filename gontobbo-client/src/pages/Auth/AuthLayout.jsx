@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
-import { Navbar } from "../shared/Layout";
 import AuthSidebar from "./components/AuthSidebar";
+import Navbar from "../shared/Navbar/Navbar";
 
 const AuthLayout = () => {
   return (
