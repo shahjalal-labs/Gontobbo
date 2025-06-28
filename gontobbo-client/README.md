@@ -22,17 +22,19 @@
 
 ### 📝 Home Page Desktop Preview:
 
+![Screenshot](src/assets/screenshots/preview/desktopPreview.png)
+
 <!-- ![Screenshot](src/assets/screenshots/ss-10-18-55-AM_28-06-25.png) -->
 
-![Screenshot](gontobbo-client/src/assets/screenshots/ss-10-19-51-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-24-03-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-24-25-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-24-49-AM_28-06-25.png)
-
-![Screenshot](src/assets/screenshots/ss-10-25-39-AM_28-06-25.png)
+<!-- ![Screenshot](src/assets/screenshots/ss-10-19-51-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-24-03-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-24-25-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-24-49-AM_28-06-25.png) -->
+<!---->
+<!-- ![Screenshot](src/assets/screenshots/ss-10-25-39-AM_28-06-25.png) -->
 
 ### 📝 Home Page Mobile Preview under 70% tab zoom:
 
@@ -61,3 +63,8 @@
 ![Screenshot](src/assets/screenshots/ss-11-27-22-AM_28-06-25.png)
 
 ![Screenshot](src/assets/screenshots/ss-11-27-45-AM_28-06-25.png)
+
+## full page through ss
+
+![Screenshot](src/assets/screenshots/fullpage.png)
+![Screenshot](src/assets/screenshots/mobileviewFullpage.png)
