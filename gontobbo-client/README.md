@@ -49,3 +49,15 @@
 ![Screenshot](src/assets/screenshots/ss-10-47-26-AM_28-06-25.png)
 
 ![Screenshot](src/assets/screenshots/ss-10-47-44-AM_28-06-25.png)
+
+### 📝 Home Page Laptop Preview for 1280px:
+
+![Screenshot](src/assets/screenshots/ss-11-26-15-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-26-35-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-26-58-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-27-22-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-27-45-AM_28-06-25.png)
