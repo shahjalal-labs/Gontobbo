@@ -3,7 +3,7 @@ import { bgDesign, locationRoundedRemovebg } from "../import";
 const BeMerchant = () => {
   return (
     <div
-      className=""
+      className="mb-10"
       style={{
         backgroundImage: `url(${bgDesign})`,
       }}
