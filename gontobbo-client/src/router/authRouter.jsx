@@ -9,7 +9,7 @@ const authRouter = {
   children: [
     {
       path: "signin",
-      Component: Login,
+      Component: Signin,
     },
     {
       path: "signup",

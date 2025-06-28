@@ -1,15 +1,4 @@
-import { Link } from "react-router";
 import { motion } from "motion/react";
-import SigninForm from "../components/SigninForm";
-import LottieAnimation from "../../../animation/LottieAnimation";
-import { authLottie } from "../../../animation";
-import {
-  leftToRight,
-  rightToLeft,
-  topToBottom,
-} from "../../../animation/motion";
-import UseHelmet from "../../../hooks/useHelmet";
-
 const Signin = () => {
   return (
     <div className="min-h-[80vh] mt-10 bg-gray-100 py-10 rounded-lg shadow">
