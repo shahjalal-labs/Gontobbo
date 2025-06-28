@@ -3,6 +3,7 @@ import RootLayout from "../layout/RootLayout";
 import Home from "../pages/Home/Home/Home";
 import "aos/dist/aos.css";
 import Aos from "aos";
+import AuthLayout from "../layout/AuthLayout";
 
 Aos.init();
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         // Component: Chk,
       },
     ],
+  },
+  {
+    path: "/auth",
+    Component: AuthLayout,
   },
 ]);
 
