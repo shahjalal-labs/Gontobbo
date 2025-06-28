@@ -1,8 +1,5 @@
-import { Button } from "../../shared/ui";
-import { Facebook, Github } from "lucide-react";
-import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router";
-import useAuth from "../../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const SocialLogin = () => {
   const { googleSignIn } = useAuth();
