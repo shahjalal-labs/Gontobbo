@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import { Button, Input } from "../../shared/ui";
 import SocialLogin from "./SocialLogin";
 
 const SigninForm = () => {
@@ -12,13 +11,13 @@ const SigninForm = () => {
         Sign In Now
       </h2>
       <fieldset className="p-4 fieldset">
-        <Input
+        <input
           type="email"
           label="Email"
           placeholder="Write your email"
           className="mb-2 w-full sm:min-w-[400px] input-info rounded-full max-sm:w-"
         />
-        <Input
+        <input
           type="email"
           label="Password"
           placeholder="Write your password"
@@ -28,9 +27,9 @@ const SigninForm = () => {
           <Link to="/auth/forgot-pass">Forgot your password?</Link>
         </p>
 
-        <Button className="btn-block btn-info rounded-full" variant="info">
+        <button className="btn-block btn-info rounded-full" variant="info">
           Sign In
-        </Button>
+        </button>
         <p className="mt-3">
           Not a member? <Link to="/auth/signup">Sign Up</Link>
         </p>

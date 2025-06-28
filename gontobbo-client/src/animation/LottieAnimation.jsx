@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
 
-const LottieAnimation = ({anime}) => {
+const LottieAnimation = ({ anime }) => {
   return <Lottie animationData={anime} />;
 };
 
