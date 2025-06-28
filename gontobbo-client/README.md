@@ -16,6 +16,36 @@
 
 ---
 
-![Screenshot](src/assets/screenshots/ss-10-18-55-AM_28-06-25.png)
+### 🙍 Developer info:
+
+![Screenshot](src/assets/screenshots/ss-10-27-08-AM_28-06-25.png)
+
+### 📝 Home Page Desktop Preview:
+
+<!-- ![Screenshot](src/assets/screenshots/ss-10-18-55-AM_28-06-25.png) -->
 
 ![Screenshot](src/assets/screenshots/ss-10-19-51-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-24-03-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-24-25-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-24-49-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-25-39-AM_28-06-25.png)
+
+### 📝 Home Page Mobile Preview under 70% tab zoom:
+
+![Screenshot](src/assets/screenshots/ss-10-41-19-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-46-00-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-46-22-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-46-48-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-47-08-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-47-26-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-10-47-44-AM_28-06-25.png)
