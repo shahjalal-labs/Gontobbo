@@ -63,3 +63,23 @@
 ![Screenshot](src/assets/screenshots/ss-11-27-45-AM_28-06-25.png)
 
 #### checking auto ai push with commit message
+
+![Screenshot](src/assets/screenshots/ss-11-28-08-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-28-22-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-28-35-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-28-49-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-29-12-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-29-26-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-11-29-40-AM_28-06-25.png)
+
+#### checking auto ai push with commit message
+
+![Screenshot](src/assets/screenshots/ss-11-30-04-AM_28-06-25.png)
+
+![Screenshot](src/assets/screenshots/ss-
