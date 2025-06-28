@@ -24,7 +24,7 @@
 
 <!-- ![Screenshot](src/assets/screenshots/ss-10-18-55-AM_28-06-25.png) -->
 
-![Screenshot](src/assets/screenshots/ss-10-19-51-AM_28-06-25.png)
+![Screenshot](gontobbo-client/src/assets/screenshots/ss-10-19-51-AM_28-06-25.png)
 
 ![Screenshot](src/assets/screenshots/ss-10-24-03-AM_28-06-25.png)
 
