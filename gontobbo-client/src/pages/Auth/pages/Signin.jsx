@@ -5,13 +5,13 @@ import {
   rightToLeft,
   topToBottom,
 } from "../../../animation/motion";
-import UseHelmet from "../../../hooks/useHelmet";
+// import UseHelmet from "../../../hooks/useHelmet";
 import { motion } from "motion/react";
 import SigninForm from "../components/SigninForm";
 const Signin = () => {
   return (
     <div className="min-h-[80vh] mt-10 bg-gray-100 py-10 rounded-lg shadow">
-      <UseHelmet title="Sign in" />
+      {/* <UseHelmet title="Sign in" /> */}
       <motion.div className="max-lg:max-w-[490px] mx-auto" {...topToBottom}>
         <h2 className="text-center text-xl sm:text-3xl font-semibold font-kaushan text-purple-700">
           WorkElevate connects talent with opportunity.

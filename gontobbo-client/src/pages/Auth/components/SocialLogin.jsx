@@ -13,15 +13,15 @@ const SocialLogin = () => {
 
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
-    const user = await googleSignIn();
-    Swal.fire({
+    // const user = await googleSignIn();
+    /* Swal.fire({
       position: "center",
       icon: "success",
       title: "Sign in Success!",
       text: "You have successfully signed in",
       showConfirmButton: false,
       timer: 2000,
-    });
+    }); */
     setTimeout(() => {
       navigate("/");
     }, 3000);
