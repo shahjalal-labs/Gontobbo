@@ -15,7 +15,7 @@ const BangladeshMap = ({ zones }) => {
     <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
       <MapContainer
         center={[23.685, 90.3563]}
-        zoom={7.5}
+        zoom={8}
         scrollWheelZoom={true}
         className="h-[75vh] w-full z-0"
       >

@@ -9,8 +9,8 @@ const GontobboZones = () => {
   // Custom lightweight search filter
   const filteredZones = useMemo(() => {
     const normalize = (str) =>
-      str
-        ?.toLowerCase()
+      String(str || "")
+        .toLowerCase()
         .replace(/[^a-zA-Z0-9]/g, "")
         .trim();
 

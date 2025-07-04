@@ -6,7 +6,7 @@ export const navItems = (
       <Link to="/">Home</Link>
     </li>
     <li>
-      <Link to="/about-us">About Us</Link>
+      <Link to="/gontobbo-zones">Gontobbo Zones</Link>
     </li>
     <li>
       <Link to="/about-us">About Us</Link>

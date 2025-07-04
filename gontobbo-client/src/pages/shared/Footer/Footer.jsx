@@ -52,6 +52,14 @@ const Footer = () => {
         <Link to="/cookies" className="link link-hover">
           Cookie policy
         </Link>
+        <Link
+          to="https://github.com/shahjalal-labs/Gontobbo/tree/main/gontobbo-client"
+          className="link link-hover"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Source code
+        </Link>
       </nav>
     </footer>
   );
