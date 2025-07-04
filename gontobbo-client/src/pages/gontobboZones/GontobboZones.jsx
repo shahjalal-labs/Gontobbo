@@ -1,50 +1,58 @@
-// GontobboZones.jsx
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
+import { motion } from "motion/react";
 import { gontobboZones } from "./gontobbo.constants";
 import BangladeshMap from "./components/BangladeshMap";
-import { motion } from "framer-motion";
-import Fuse from "fuse.js";
 
 const GontobboZones = () => {
-  const [search, setSearch] = useState("");
+  const [query, setQuery] = useState("");
 
-  // Setup Fuse.js config
-  const fuse = useMemo(() => {
-    return new Fuse(gontobboZones, {
-      keys: ["district", "city", "covered_area"],
-      threshold: 0.4, // 0 = perfect match, 1 = match everything
-    });
-  }, []);
-
+  // Custom lightweight search filter
   const filteredZones = useMemo(() => {
-    if (!search.trim()) return gontobboZones;
-    const results = fuse.search(search.trim());
-    return results.map((result) => result.item);
-  }, [search, fuse]);
+    const normalize = (str) =>
+      str
+        ?.toLowerCase()
+        .replace(/[^a-zA-Z0-9]/g, "")
+        .trim();
+
+    const q = normalize(query);
+
+    return gontobboZones.filter((zone) => {
+      const values = [zone.district, zone.city, zone.covered_area].map(
+        normalize,
+      );
+
+      return values.some((val) => val.includes(q));
+    });
+  }, [query]);
 
   return (
     <div className="px-4 md:px-10 py-10">
+      {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="text-3xl md:text-4xl font-bold text-center mb-6 text-primary"
+        className="text-3xl md:text-4xl font-bold text-center mb-10 text-primary"
       >
         📍 Gontobbo Zones in Bangladesh
       </motion.h1>
 
-      {/* 🔍 Search Box */}
-      <div className="flex justify-center mb-6">
+      {/* Search Box */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <input
           type="text"
-          placeholder="🔎 Search district, city or area (fuzzy match)..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full max-w-md px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-primary transition duration-300"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="🔍 Search by district, city or area..."
+          className="w-full md:w-1/2 mx-auto block mb-8 px-5 py-3 rounded-2xl border shadow-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary transition-all"
         />
-      </div>
+      </motion.div>
 
-      {/* 🗺️ Map */}
+      {/* Map Display */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -53,11 +61,15 @@ const GontobboZones = () => {
         <BangladeshMap zones={filteredZones} />
       </motion.div>
 
-      {/* ⚠️ No match found */}
+      {/* Optional: No Match UI */}
       {filteredZones.length === 0 && (
-        <p className="text-center mt-4 text-gray-500">
-          No zones found for your search.
-        </p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center text-red-500 mt-10 font-medium"
+        >
+          ❌ No matching zones found.
+        </motion.p>
       )}
     </div>
   );
