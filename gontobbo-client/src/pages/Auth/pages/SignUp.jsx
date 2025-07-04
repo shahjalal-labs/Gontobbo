@@ -2,13 +2,13 @@ import { authLottie } from "../../../animation";
 import LottieAnimation from "../../../animation/LottieAnimation";
 import SignUpForm from "../components/SignUpForm";
 import UseHelmet from "../../../hooks/useHelmet";
-import { rightToLeft } from "../../../animation/motion";
+import { leftToRight, rightToLeft } from "../../../animation/motion";
 import { motion } from "motion/react";
 
 const SignUp = () => {
   return (
     <div className="min-h-[80vh] mt-10 bg-gray-100 py-10 rounded-lg shadow">
-      {/* <UseHelmet title="Sign up" /> */}
+      <UseHelmet title="Sign up" />
       <div className="max-lg:max-w-[490px] mx-auto">
         <h2
           className="text-center text-xl sm:text-3xl font-semibold font-kaushan 
@@ -22,7 +22,10 @@ const SignUp = () => {
         </p>
       </div>
       <div className="flex  flex-col-reverse lg:flex-row items-center justify-around *:flex-1 gap-7  mt-5">
-        <motion.div className="lg:max-w-[480px]  order bg-gray-50 shadow-lg rounded-lg hover:shadow-sm hover:scale-98">
+        <motion.div
+          className="lg:max-w-[480px]  order bg-gray-50 shadow-lg rounded-lg hover:shadow-sm hover:scale-98"
+          {...leftToRight}
+        >
           <LottieAnimation anime={authLottie} />
         </motion.div>
         <motion.div className="max-w-[480px]" {...rightToLeft}>

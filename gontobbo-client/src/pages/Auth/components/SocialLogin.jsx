@@ -12,15 +12,15 @@ const SocialLogin = () => {
 
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
-    // const user = await googleSignIn();
-    /* Swal.fire({
+    const user = await googleSignIn();
+    Swal.fire({
       position: "center",
       icon: "success",
       title: "Sign in Success!",
       text: "You have successfully signed in",
       showConfirmButton: false,
       timer: 2000,
-    }); */
+    });
     setTimeout(() => {
       navigate("/");
     }, 3000);
@@ -29,7 +29,6 @@ const SocialLogin = () => {
     <div>
       <div className="divider mt-5">Or continue with</div>
       <div className="flex justify-center gap-3 *:btn-accen *:rounded-full gap-5">
-        {/* <Button>Google</Button> */}
         <button
           className="btn bg-white text-black border-[#e5e5e5]"
           onClick={handleGoogleSignIn}
