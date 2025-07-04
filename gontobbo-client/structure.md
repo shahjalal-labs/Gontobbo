@@ -10,58 +10,32 @@
 ├── public
 │   ├── CNAME
 │   └── vite.svg
+├── README2.md
+├── readmeGenerate.md
 ├── README.md
 ├── src
-│   ├── animation
-│   │   ├── auth-lottie.json
-│   │   ├── index.js
-│   │   ├── LottieAnimation.jsx
-│   │   └── motion.js
-│   ├── App.jsx
-│   ├── assets
-│   │   ├── Brands
-│   │   │   ├── 1panel.svg
-│   │   │   ├── abbott.svg
-│   │   │   ├── activision.svg
-│   │   │   ├── index.js
-│   │   │   ├── logmein.svg
-│   │   │   ├── nike.svg
-│   │   │   ├── openjsfoundation.svg
-│   │   │   └── tech.svg
+    ├── assets
 │   │   ├── images
-│   │   │   ├── a-delivery-bike-speeding-through-a-vibrant-bangladesh.jpg
-│   │   │   ├── bgDesign.jpg
-│   │   │   ├── finalLogo.png
-│   │   │   ├── footerBg.jpg
-│   │   │   ├── index.js
-│   │   │   ├── location.jpg
-│   │   │   ├── locationRounded.png
-│   │   │   ├── locationRounded-removebg.png
-│   │   │   ├── logoCircle2.png
-│   │   │   ├── logoCircle.png
-│   │   │   ├── logoFull.jpg
-│   │   │   ├── logoFull-modified.png
-│   │   │   ├── logo.jpg
-│   │   │   ├── preview
-│   │   │   │   ├── Desktop
-│   │   │   │   │   ├── Create
-│   │   │   │   │   │   └── CreateParcel3.png
-│   │   │   │   │   └── Home
-│   │   │   │   │       ├── Hompage1.png
-│   │   │   │   │       └── updatePage2.png
-│   │   │   │   ├── Laptop
-│   │   │   │   │   ├── Create
-│   │   │   │   │   │   └── CreateParcel3.png
-│   │   │   │   │   ├── Home
-│   │   │   │   │   │   └── laptopPreview.png
-│   │   │   │   │   └── Update
-│   │   │   │   │       └── updatePage2.png
-│   │   │   │   └── Mobile
-│   │   │   │       ├── CreateParcel3.png
-│   │   │   │       ├── mobilePreview.png
+│   │   ├── preview
+│   │   │   ├── Desktop
+│   │   │   │   ├── Create
+│   │   │   │   │   └── CreateParcel3.png
+│   │   │   │   └── Home
+│   │   │   │       ├── Hompage1.png
 │   │   │   │       └── updatePage2.png
-│   │   │   └── profile.jpg
-│   │   ├── react.svg
+│   │   │   ├── Laptop
+│   │   │   │   ├── Create
+│   │   │   │   │   └── CreateParcel3.png
+│   │   │   │   ├── Home
+│   │   │   │   │   └── laptopPreview.png
+│   │   │   │   └── Update
+│   │   │   │       └── updatePage2.png
+│   │   │   └── Mobile
+│   │   │       ├── CreateParcel3.png
+│   │   │       ├── mobilePreview.png
+│   │   │       └── updatePage2.png
+│   │   └── profile.jpg
+│   │   react.svg
 │   │   └── screenshots
 │   │       ├── fullpage.png
 │   │       ├── mobileviewFullpage.png
@@ -177,6 +151,6 @@
 ├── structure.md
 └── vite.config.js
 
-44 directories, 131 files
+44 directories, 133 files
 
 ```
