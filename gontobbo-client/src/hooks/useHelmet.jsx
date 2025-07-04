@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 const UseHelmet = ({ title }) => {
   return (
     <Helmet>
-      <title>{title} || WorkElevate</title>
+      <title>{title} || Gontobbo</title>
     </Helmet>
   );
 };

@@ -18,6 +18,10 @@ const router = createBrowserRouter([
         Component: Home,
       },
       {
+        path: "gontobbo-zones",
+        Component: Home,
+      },
+      {
         path: "chk",
         // Component: Chk,
       },
