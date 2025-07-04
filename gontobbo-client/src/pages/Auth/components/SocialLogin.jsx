@@ -4,12 +4,12 @@ import useAuth from "../../../hooks/useAuth";
 import { Facebook, Github } from "lucide-react";
 
 const SocialLogin = () => {
-  const { googleSignIn } = useAuth();
+  const auth = useAuth();
+  console.log(auth?.googleSignIn, "SocialLogin.jsx", 8);
 
   const navigate = useNavigate();
 
   const location = useLocation();
-  console.log(location, "SocialLogin.jsx", 14);
 
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
