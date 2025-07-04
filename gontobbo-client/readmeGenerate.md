@@ -26,6 +26,7 @@ Make sure this `README.md` looks visually appealing, easy to read, and suitable 
 │   ├── CNAME
 │   └── vite.svg
 ├── README2.md
+├── readmeGenerate.md
 ├── README.md
 ├── src
 │   ├── animation
@@ -132,7 +133,7 @@ Make sure this `README.md` looks visually appealing, easy to read, and suitable 
 ├── structure.md
 └── vite.config.js
 
-35 directories, 81 files
+35 directories, 82 files
 
 ```
 
@@ -289,37 +290,29 @@ export default router;
 
 ### 🖥️ Desktop View
 
-#### Create
+**Home/Hompage**  
+![](<src/assets/images/preview/Desktop/Home/Hompage1.png>)
 
-**Create Parcel**  
-![](src/assets/images/preview/Desktop/Create/CreateParcel3.png)
+**Home/update Page**  
+![](<src/assets/images/preview/Desktop/Home/updatePage2.png>)
 
-#### Home
-
-**Hompage**  
-![](src/assets/images/preview/Desktop/Home/Hompage1.png)
-
-**Update Page**  
-![](src/assets/images/preview/Desktop/Home/updatePage2.png)
+**Create/Create Parcel**  
+![](<src/assets/images/preview/Desktop/Create/CreateParcel3.png>)
 
 ### 💻 Laptop View
 
-#### Create
+**Update/update Page**  
+![](<src/assets/images/preview/Laptop/Update/updatePage2.png>)
 
-**Create Parcel**  
-![](src/assets/images/preview/Laptop/Create/CreateParcel3.png)
-
-#### Home
-
-_No images found in Home._
-
-#### Update
-
-**Update Page**  
-![](src/assets/images/preview/Laptop/Update/updatePage2.png)
+**Create/Create Parcel**  
+![](<src/assets/images/preview/Laptop/Create/CreateParcel3.png>)
 
 ### 📱 Mobile View
 
-_No subfolders found under 📱 Mobile View._
+**Update Page**  
+![](<src/assets/images/preview/Mobile/updatePage2.png>)
+
+**Create Parcel**  
+![](<src/assets/images/preview/Mobile/CreateParcel3.png>)
 
 ```
