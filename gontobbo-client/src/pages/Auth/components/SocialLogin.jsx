@@ -4,8 +4,7 @@ import useAuth from "../../../hooks/useAuth";
 import { Facebook, Github } from "lucide-react";
 
 const SocialLogin = () => {
-  const auth = useAuth();
-  console.log(auth?.googleSignIn, "SocialLogin.jsx", 8);
+  const { googleSignIn } = useAuth();
 
   const navigate = useNavigate();
 
@@ -64,10 +63,10 @@ const SocialLogin = () => {
           </svg>
           Google
         </button>
-        <button className="btn-neutral">
+        <button className="btn btn-neutral">
           <Github /> Github
         </button>
-        <button className="btn-info">
+        <button className="btn btn-info">
           <Facebook /> Facebook
         </button>
       </div>

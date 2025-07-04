@@ -15,19 +15,19 @@ const SigninForm = () => {
           type="email"
           label="Email"
           placeholder="Write your email"
-          className="mb-2 w-full sm:min-w-[400px] input-info rounded-full max-sm:w-"
+          className="mb-2 w-full sm:min-w-[400px] input input-info rounded-full max-sm:w-"
         />
         <input
           type="email"
           label="Password"
           placeholder="Write your password"
-          className="mb- w-full sm:min-w-[400px] rounded-full input-info"
+          className="mb- w-full sm:min-w-[400px] rounded-full input input-info"
         />
         <p className="mb-3 text-gray-500">
           <Link to="/auth/forgot-pass">Forgot your password?</Link>
         </p>
 
-        <button className="btn-block btn-info rounded-full" variant="info">
+        <button className="btn btn-block btn-info rounded-full" variant="info">
           Sign In
         </button>
         <p className="mt-3">
