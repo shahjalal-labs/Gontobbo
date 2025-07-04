@@ -42,6 +42,24 @@
 │   │   │   ├── logoFull.jpg
 │   │   │   ├── logoFull-modified.png
 │   │   │   ├── logo.jpg
+│   │   │   ├── preview
+│   │   │   │   ├── Desktop
+│   │   │   │   │   ├── Create
+│   │   │   │   │   │   └── CreateParcel3.png
+│   │   │   │   │   └── Home
+│   │   │   │   │       ├── Hompage1.png
+│   │   │   │   │       └── updatePage2.png
+│   │   │   │   ├── Laptop
+│   │   │   │   │   ├── Create
+│   │   │   │   │   │   └── CreateParcel3.png
+│   │   │   │   │   ├── Home
+│   │   │   │   │   │   └── laptopPreview.png
+│   │   │   │   │   └── Update
+│   │   │   │   │       └── updatePage2.png
+│   │   │   │   └── Mobile
+│   │   │   │       ├── CreateParcel3.png
+│   │   │   │       ├── mobilePreview.png
+│   │   │   │       └── updatePage2.png
 │   │   │   └── profile.jpg
 │   │   ├── react.svg
 │   │   └── screenshots
@@ -114,6 +132,10 @@
 │   │   │   └── Register
 │   │   │       └── Register.jsx
 │   │   ├── gontobboZones
+│   │   │   ├── components
+│   │   │   │   ├── BangladeshMap.jsx
+│   │   │   │   ├── GontobboInfoPopup.jsx
+│   │   │   │   └── ZoneCard.jsx
 │   │   │   ├── gontobbo.constants.js
 │   │   │   └── GontobboZones.jsx
 │   │   ├── Home
@@ -155,6 +177,6 @@
 ├── structure.md
 └── vite.config.js
 
-34 directories, 119 files
+44 directories, 131 files
 
 ```
