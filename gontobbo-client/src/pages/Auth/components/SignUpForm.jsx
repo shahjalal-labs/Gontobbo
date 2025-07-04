@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import useAuth from "../../../hooks/useAuth";
+import SignUpPasswordInputs from "./SignUpPasswordInputs";
+import SocialLogin from "./SocialLogin";
 
 const SignUpForm = () => {
   const navigate = useNavigate();
@@ -59,6 +61,9 @@ const SignUpForm = () => {
         Sign Up Now
       </h2>
       <fieldset className="w-full  p-4 fieldset block">
+        <label htmlFor="photoUrl" className="label text-base mt-2 mb-1">
+          Name
+        </label>
         <input
           label="Name"
           placeholder="Write your name"
@@ -67,11 +72,14 @@ const SignUpForm = () => {
           required
           minLength={3}
         />
-        <Input
+        <label htmlFor="photoUrl" className="label text-base mt-2 mb-1">
+          Email
+        </label>
+        <input
           type="email"
           label="Email"
           placeholder="Write your email"
-          className="mb-2 w-full sm:min-w-[400px] input-info rounded-full"
+          className="mb-2 w-full sm:min-w-[400px] input input-info rounded-full"
           name="email"
           required
         />
@@ -82,21 +90,23 @@ const SignUpForm = () => {
           confirmShowPassword={confirmShowPassword}
           setConfirmShowPassword={setConfirmShowPassword}
         />
-
-        <Input
+        <label htmlFor="photoUrl" className="label text-base mt-2 mb-1">
+          Photo Url
+        </label>
+        <input
           type="url"
           label="Photo Url"
           placeholder="Give your photo url"
-          className=" w-full sm:min-w-[400px] rounded-full input-info"
+          className=" w-full sm:min-w-[400px] rounded-full input input-info"
           name="photoUrl"
         />
-        <Button
+        <button
           type="submit"
-          className="btn-block btn-info rounded-full mt-3"
+          className="btn btn-block btn-info rounded-full mt-3"
           variant="info"
         >
           Sign Up
-        </Button>
+        </button>
         <p className="mt-3">
           Already a member? <Link to="/auth/signin">Sign In</Link>
         </p>

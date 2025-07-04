@@ -2,6 +2,8 @@ import { authLottie } from "../../../animation";
 import LottieAnimation from "../../../animation/LottieAnimation";
 import SignUpForm from "../components/SignUpForm";
 import UseHelmet from "../../../hooks/useHelmet";
+import { rightToLeft } from "../../../animation/motion";
+import { motion } from "motion/react";
 
 const SignUp = () => {
   return (
@@ -20,12 +22,12 @@ const SignUp = () => {
         </p>
       </div>
       <div className="flex  flex-col-reverse lg:flex-row items-center justify-around *:flex-1 gap-7  mt-5">
-        <div className="lg:max-w-[480px]  order bg-gray-50 shadow-lg rounded-lg hover:shadow-sm hover:scale-98">
+        <motion.div className="lg:max-w-[480px]  order bg-gray-50 shadow-lg rounded-lg hover:shadow-sm hover:scale-98">
           <LottieAnimation anime={authLottie} />
-        </div>
-        <div className="max-w-[480px]">
+        </motion.div>
+        <motion.div className="max-w-[480px]" {...rightToLeft}>
           <SignUpForm />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
