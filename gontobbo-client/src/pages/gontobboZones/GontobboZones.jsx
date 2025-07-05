@@ -38,6 +38,7 @@ const GontobboZones = () => {
         📍 Gontobbo Zones in Bangladesh
       </motion.h1>
 
+      {/* Search Box */}
       {/* <GontobboSearchBox query={query} setQuery={setQuery} /> */}
 
       {/* Map Display */}
