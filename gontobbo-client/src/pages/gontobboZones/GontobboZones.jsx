@@ -1,3 +1,4 @@
+import GontobboSearchBox from "./components/GontobboSearchBox";
 import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { gontobboZones } from "./gontobbo.constants";
@@ -38,6 +39,7 @@ const GontobboZones = () => {
       </motion.h1>
 
       {/* Search Box */}
+      {/* <GontobboSearchBox query={query} setQuery={setQuery} /> */}
 
       {/* Map Display */}
       <motion.div
