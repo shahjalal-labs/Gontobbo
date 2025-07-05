@@ -18,6 +18,7 @@ Make sure this `README.md` looks visually appealing, easy to read, and suitable 
 ## 📁 File Structure
 ```bash
 .
+├── 1.md
 ├── bun.lock
 ├── demo.mp4
 ├── eslint.config.js
@@ -29,6 +30,7 @@ Make sure this `README.md` looks visually appealing, easy to read, and suitable 
 │   └── vite.svg
 ├── README2.md
 ├── readmeGenerateAdvanced.md
+├── readmeGenerateFull.md
 ├── readmeGeneratePrev.md
 ├── README.md
 ├── src
@@ -136,7 +138,7 @@ Make sure this `README.md` looks visually appealing, easy to read, and suitable 
 ├── structure.md
 └── vite.config.js
 
-35 directories, 83 files
+35 directories, 85 files
 
 ```
 

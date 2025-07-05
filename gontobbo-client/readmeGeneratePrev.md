@@ -1,7 +1,8 @@
-```markdown
+````markdown
 Generate a professional, modern, and production-ready `README.md` file based on my project. Your entire output **must be enclosed within a single markdown code block** using triple backticks and `markdown` as the language. Absolutely **no text should be outside** the code block. The structure, formatting, and content should follow **industry best practices** for open-source projects, with clearly separated sections (e.g., Features, Tech Stack, Installation, Folder Structure, License, etc.).
 
 The markdown must:
+
 - Your entire Output must be inside one **single** markdown code block using triple backticks (```) and `markdown` as the language
 - Use clear section headers (`##`) and subheaders (`###`) consistently
 - Include emoji icons in section titles for modern visual appeal
@@ -11,9 +12,8 @@ The markdown must:
 
 Make sure this `README.md` looks visually appealing, easy to read, and suitable for developers on GitHub or other platforms. Output strictly in one markdown code block.
 
-
-
 ## 📁 File Structure
+
 ```bash
 .
 ├── bun.lock
@@ -134,11 +134,11 @@ Make sure this `README.md` looks visually appealing, easy to read, and suitable 
 └── vite.config.js
 
 35 directories, 82 files
-
 ```
-
+````
 
 ## 📦 package.json
+
 ```json
 {
   "name": "client-gontobbo",
@@ -184,11 +184,10 @@ Make sure this `README.md` looks visually appealing, easy to read, and suitable 
     "vite": "^6.3.5"
   }
 }
-
 ```
 
-
 ## 🗺️ Routes
+
 ```js
 
 // File: src/router/authRouter.jsx
@@ -258,8 +257,8 @@ export default router;
 
 ```
 
-
 ## 📄 Existing README
+
 ```md
 ## 📂 Project Information
 
@@ -282,37 +281,38 @@ export default router;
 ### 🙍 Developer info:
 
 ![Screenshot](src/assets/screenshots/ss-10-27-08-AM_28-06-25.png)
-
 ```
-
 
 ## 🖼️ UI Preview Section
 
 ### 🖥️ Desktop View
 
 **Home/Hompage**  
-![](<src/assets/images/preview/Desktop/Home/Hompage1.png>)
+![](src/assets/images/preview/Desktop/Home/Hompage1.png)
 
 **Home/update Page**  
-![](<src/assets/images/preview/Desktop/Home/updatePage2.png>)
+![](src/assets/images/preview/Desktop/Home/updatePage2.png)
 
 **Create/Create Parcel**  
-![](<src/assets/images/preview/Desktop/Create/CreateParcel3.png>)
+![](src/assets/images/preview/Desktop/Create/CreateParcel3.png)
 
 ### 💻 Laptop View
 
 **Update/update Page**  
-![](<src/assets/images/preview/Laptop/Update/updatePage2.png>)
+![](src/assets/images/preview/Laptop/Update/updatePage2.png)
 
 **Create/Create Parcel**  
-![](<src/assets/images/preview/Laptop/Create/CreateParcel3.png>)
+![](src/assets/images/preview/Laptop/Create/CreateParcel3.png)
 
 ### 📱 Mobile View
 
 **Update Page**  
-![](<src/assets/images/preview/Mobile/updatePage2.png>)
+![](src/assets/images/preview/Mobile/updatePage2.png)
 
 **Create Parcel**  
-![](<src/assets/images/preview/Mobile/CreateParcel3.png>)
+![](src/assets/images/preview/Mobile/CreateParcel3.png)
 
 ```
+
+```
+
