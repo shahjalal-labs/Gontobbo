@@ -14,7 +14,7 @@ const SignUp = () => {
           className="text-center text-xl sm:text-3xl font-semibold font-kaushan 
           "
         >
-          WorkElevate connects talent with opportunity.
+          Gontobbo connects talent with opportunity.
         </h2>
         <p className="text-center text-gray-500 ext-sm mb-10 mt-2">
           Sign up to access thousands of jobs, connect with employers, and take

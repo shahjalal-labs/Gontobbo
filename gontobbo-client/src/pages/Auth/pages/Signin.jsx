@@ -14,7 +14,7 @@ const Signin = () => {
       {/* <UseHelmet title="Sign in" /> */}
       <motion.div className="max-lg:max-w-[490px] mx-auto" {...topToBottom}>
         <h2 className="text-center text-xl sm:text-3xl font-semibold font-kaushan text-purple-700">
-          WorkElevate connects talent with opportunity.
+          Gontobbo connects talent with opportunity.
         </h2>
         <p className="text-center text-gray-500 ext-sm mb-10 mt-2">
           Log in to access thousands of jobs, connect with employers, and take

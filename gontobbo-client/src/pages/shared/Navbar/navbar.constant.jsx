@@ -11,5 +11,8 @@ export const navItems = (
     <li>
       <Link to="/send-parcel">Send Parcel</Link>
     </li>
+    <li>
+      <Link to="/chatbot">Ai Chatbot</Link>
+    </li>
   </>
 );
