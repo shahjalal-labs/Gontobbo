@@ -1,13 +1,10 @@
-import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import { formValidations } from "../../../utils/formValidations";
-import FormInput from "./FormInput";
 import { useEffect } from "react";
 import { testData } from "../sendpercel.constant";
-import FormSelect from "./SendParecelFormSelect";
 import ParcelInfo from "./ParcelInfo";
-import FormTextarea from "./SendPercelFormTextArea";
+import SenderInfo from "./SenderInfo";
+import ReceiverInfo from "./RecieverInfo";
 // import axiosSecure from "../../../hooks/useAxiosSecure"; // Uncomment and use when ready
 
 const MySwal = withReactContent(Swal);
@@ -72,15 +69,19 @@ const SendParcelForm = ({
             Fill in the details below
           </p>
         </header>
-
         {/* 📦 Parcel Info */}
         <ParcelInfo
           register={register}
           errors={errors}
           parcelType={parcelType}
         />
-        {/* 👤 Sender & Receiver */}
 
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* 👤 Sender &  */}
+          <SenderInfo />
+          {/* Receiver info */}
+          <ReceiverInfo />
+        </section>
         {/* ✅ Submit */}
         <div className="text-center">
           <button
