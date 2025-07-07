@@ -1,18 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import SendParcelForm from "./components/SendParcelForm";
 import { gontobboZones } from "../gontobboZones/gontobbo.constants";
-const {
-  register,
-  handleSubmit,
-  watch,
-  reset,
-  formState: { errors },
-} = useForm({ mode: "onBlur" });
+import { useForm } from "react-hook-form";
 
 const onSubmit = async (data) => {
   const { baseCost, weightCost, perKgRate, weight, isNonDocument, total } =
-    calculateCostWithBreakdown(data);
-  const trackingId = generateTrackingId();
+    data;
+  //   calculateCostWithBreakdown(data);
+  // const trackingId = generateTrackingId();
 
   const confirm = await MySwal.fire({
     title: "📦 Confirm Parcel Details",
@@ -65,11 +60,23 @@ const onSubmit = async (data) => {
 };
 
 const SendParcel = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm({ mode: "onBlur" });
+
   return (
     <div>
       <SendParcelForm
         serviceCenters={gontobboZones}
-        onSubmit={handleFormSubmit}
+        onSubmit={handleSubmit}
+        register={register}
+        watch={watch}
+        reset={reset}
+        errors={errors}
       />
       ;
     </div>
