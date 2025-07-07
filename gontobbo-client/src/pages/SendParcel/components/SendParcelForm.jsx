@@ -14,8 +14,8 @@ const testData = {
   weight: 2,
   sender_name: "Alice",
   sender_contact: "01989763779",
-  sender_region: "Dhaka", // must match one region exactly
-  sender_center: "Dhaka", // must match district in Dhaka region
+  sender_region: "Dhaka",
+  sender_center: "Dhaka",
   sender_address: "123, Dhanmondi",
   pickup_instruction: "Call before pickup",
   receiver_name: "Bob",
@@ -25,6 +25,7 @@ const testData = {
   receiver_address: "456, Pahartali",
   delivery_instruction: "Leave at gate",
 };
+
 const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
   const {
     register,
@@ -33,6 +34,7 @@ const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
     reset,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
+
   useEffect(() => {
     const handleKeydown = (e) => {
       if (e.ctrlKey && e.key === "p") {
@@ -43,41 +45,59 @@ const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
     window.addEventListener("keydown", handleKeydown);
     return () => window.removeEventListener("keydown", handleKeydown);
   }, [reset]);
+
   const parcelType = watch("type");
   const senderRegion = watch("sender_region");
   const receiverRegion = watch("receiver_region");
 
   const uniqueRegions = [...new Set(serviceCenters.map((w) => w.region))];
-
   const getDistrictsByRegion = (region) =>
     serviceCenters.filter((w) => w.region === region).map((w) => w.district);
 
-  const calculateCost = (data) => {
+  const calculateCostWithBreakdown = (data) => {
     const baseCost = 100;
     const perKgRate = 50;
-    const weightCost =
-      data.type === "non-document" && data.weight
-        ? parseFloat(data.weight) * perKgRate
-        : 0;
-    return baseCost + weightCost;
+    const isNonDocument = data.type === "non-document";
+    const weight = parseFloat(data.weight) || 0;
+    const weightCost = isNonDocument ? weight * perKgRate : 0;
+    const total = baseCost + weightCost;
+
+    return {
+      baseCost,
+      weightCost,
+      perKgRate,
+      weight,
+      isNonDocument,
+      total,
+    };
   };
 
   const generateTrackingId = () =>
     "TRK-" + Math.random().toString(36).substring(2, 10).toUpperCase();
 
   const onSubmit = async (data) => {
-    const cost = calculateCost(data);
+    const { baseCost, weightCost, perKgRate, weight, isNonDocument, total } =
+      calculateCostWithBreakdown(data);
     const trackingId = generateTrackingId();
 
     const confirm = await MySwal.fire({
-      title: "Confirm Parcel Details",
+      title: "📦 Confirm Parcel Details",
       html: `
-        <div class="text-left text-sm leading-relaxed">
+        <div class="text-left text-sm leading-relaxed space-y-1">
           <strong>Parcel:</strong> ${data.title} (${data.type})<br/>
           <strong>Sender:</strong> ${data.sender_name} (${data.sender_contact})<br/>
           <strong>Receiver:</strong> ${data.receiver_name} (${data.receiver_contact})<br/>
           <strong>Tracking ID:</strong> ${trackingId}<br/>
-          <strong>Total Cost:</strong> ৳${cost}
+          <hr class="my-2"/>
+          <strong>📊 Cost Breakdown:</strong><br/>
+          🔹 Base Cost: ৳${baseCost}<br/>
+          ${
+            isNonDocument
+              ? `🔹 Weight Cost: ${weight}kg × ৳${perKgRate} = ৳${weightCost}<br/>`
+              : `🔹 Weight Cost: N/A (Document type)<br/>`
+          }
+          <hr class="my-2"/>
+          <strong>💰 Total Cost: ৳${total}</strong>
         </div>
       `,
       showCancelButton: true,
@@ -89,7 +109,7 @@ const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
       try {
         const response = await axiosSecure.post("/parcels", {
           ...data,
-          cost,
+          cost: total,
           tracking_id: trackingId,
           status: "Pending",
           created_at: new Date(),
@@ -105,7 +125,6 @@ const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
         Swal.fire("❌ Error", "Something went wrong. Try again.", "error");
       }
       */
-
       alert("📦 Parcel submitted successfully!");
       reset();
     }
