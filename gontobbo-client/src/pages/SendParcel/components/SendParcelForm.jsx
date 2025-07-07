@@ -9,23 +9,22 @@ import { useEffect } from "react";
 
 const MySwal = withReactContent(Swal);
 const testData = {
-  title: "Test Parcel",
+  title: "Sample Parcel",
   type: "non-document",
   weight: 2,
   sender_name: "Alice",
-  sender_contact: "0123456789",
-  sender_region: "Dhaka",
-  sender_center: "Mirpur",
-  sender_address: "123, Test Street",
-  pickup_instruction: "Ring the bell",
+  sender_contact: "01989763779",
+  sender_region: "Dhaka", // must match one region exactly
+  sender_center: "Dhaka", // must match district in Dhaka region
+  sender_address: "123, Dhanmondi",
+  pickup_instruction: "Call before pickup",
   receiver_name: "Bob",
-  receiver_contact: "0987654321",
-  receiver_region: "Chittagong",
-  receiver_center: "Pahartali",
-  receiver_address: "456, Delivery Lane",
-  delivery_instruction: "Leave at doorstep",
+  receiver_contact: "01540325698",
+  receiver_region: "Chattogram",
+  receiver_center: "Bandarban",
+  receiver_address: "456, Pahartali",
+  delivery_instruction: "Leave at gate",
 };
-
 const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
   const {
     register,
