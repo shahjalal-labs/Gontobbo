@@ -9,7 +9,7 @@ export const navItems = (
       <Link to="/gontobbo-zones">Gontobbo Zones</Link>
     </li>
     <li>
-      <Link to="/about-us">About Us</Link>
+      <Link to="/send-parcel">Send Parcel</Link>
     </li>
   </>
 );

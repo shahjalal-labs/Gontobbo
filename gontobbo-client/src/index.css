@@ -8,7 +8,6 @@
 }
 
 @theme {
-
   --font-firacode: "Fira Code", monospace;
   --font-roboto: "Roboto", sans-serif;
   --font-kaushan: "Kaushan Script", cursive;
@@ -22,4 +21,8 @@
 
 .title {
   @apply text-2xl md:text-4xl font-bold  mb-4;
+}
+
+.max-container {
+  @apply max-w-7xl mx-auto;
 }

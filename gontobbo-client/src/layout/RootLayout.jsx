@@ -6,12 +6,11 @@ import TopNav from "../pages/shared/Navbar/TopNav";
 const RootLayout = () => {
   return (
     <>
-      <div className="max-w-7xl mx-auto">
-        <TopNav />
-        <Navbar />
-        <div className="min-h-[70vh]">
-          <Outlet />
-        </div>
+      <TopNav />
+      <Navbar />
+
+      <div className="min-h-[70vh] max-w-7xl mx-auto">
+        <Outlet />
       </div>
 
       <div className="bg bg-zinc-950">
