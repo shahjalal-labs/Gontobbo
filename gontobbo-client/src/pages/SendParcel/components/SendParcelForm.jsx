@@ -4,9 +4,27 @@ import withReactContent from "sweetalert2-react-content";
 import { formValidations } from "../../../utils/formValidations";
 import { FormRadioGroup, FormSelect, FormTextarea } from "../SendParcel";
 import FormInput from "./FormInput";
+import { useEffect } from "react";
 // import axiosSecure from "../../../hooks/useAxiosSecure"; // Uncomment and use when ready
 
 const MySwal = withReactContent(Swal);
+const testData = {
+  title: "Test Parcel",
+  type: "non-document",
+  weight: 2,
+  sender_name: "Alice",
+  sender_contact: "0123456789",
+  sender_region: "Dhaka",
+  sender_center: "Mirpur",
+  sender_address: "123, Test Street",
+  pickup_instruction: "Ring the bell",
+  receiver_name: "Bob",
+  receiver_contact: "0987654321",
+  receiver_region: "Chittagong",
+  receiver_center: "Pahartali",
+  receiver_address: "456, Delivery Lane",
+  delivery_instruction: "Leave at doorstep",
+};
 
 const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
   const {
@@ -16,7 +34,16 @@ const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
     reset,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
-
+  useEffect(() => {
+    const handleKeydown = (e) => {
+      if (e.ctrlKey && e.key === "p") {
+        e.preventDefault();
+        reset(testData);
+      }
+    };
+    window.addEventListener("keydown", handleKeydown);
+    return () => window.removeEventListener("keydown", handleKeydown);
+  }, [reset]);
   const parcelType = watch("type");
   const senderRegion = watch("sender_region");
   const receiverRegion = watch("receiver_region");
