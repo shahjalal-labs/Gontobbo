@@ -2,11 +2,11 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { formValidations } from "../../../utils/formValidations";
-import { FormRadioGroup, FormTextarea } from "../SendParcel";
 import FormInput from "./FormInput";
 import { useEffect } from "react";
 import { testData } from "../sendpercel.constant";
 import FormSelect from "./SendParecelFormSelect";
+import ParcelInfo from "./ParcelInfo";
 // import axiosSecure from "../../../hooks/useAxiosSecure"; // Uncomment and use when ready
 
 const MySwal = withReactContent(Swal);
@@ -128,39 +128,11 @@ const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
         </header>
 
         {/* 📦 Parcel Info */}
-        <section className="space-y-6 bg-white p-6 rounded-2xl shadow-md border border-gray-100">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Parcel Info
-          </h2>
-          <FormInput
-            id="title"
-            label="Parcel Name"
-            register={register}
-            validation={formValidations.parcel.title}
-            error={errors.title}
-          />
-          <FormRadioGroup
-            id="type"
-            label="Type"
-            register={register}
-            validation={formValidations.parcel.type}
-            error={errors.type}
-            options={[
-              { value: "document", label: "Document" },
-              { value: "non-document", label: "Non-Document" },
-            ]}
-          />
-          <FormInput
-            id="weight"
-            label="Weight (kg)"
-            type="number"
-            register={register}
-            validation={formValidations.parcel.weight(parcelType)}
-            error={errors.weight}
-            disabled={parcelType !== "non-document"}
-          />
-        </section>
-
+        <ParcelInfo
+          register={register}
+          errors={errors}
+          parcelType={parcelType}
+        />
         {/* 👤 Sender & Receiver */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Sender Info */}
