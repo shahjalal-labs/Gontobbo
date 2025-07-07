@@ -2,6 +2,7 @@
 
 ```bash
 .
+├── 1.md
 ├── bun.lock
 ├── demo.mp4
 ├── eslint.config.js
@@ -11,31 +12,61 @@
 │   ├── CNAME
 │   └── vite.svg
 ├── README2.md
-├── readmeGenerate.md
+├── readmeGenerateAdvanced.md
+├── readmeGenerateFull.md
+├── readmeGeneratePrev.md
 ├── README.md
 ├── src
-    ├── assets
+│   ├── animation
+│   │   ├── auth-lottie.json
+│   │   ├── index.js
+│   │   ├── LottieAnimation.jsx
+│   │   └── motion.js
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── Brands
+│   │   │   ├── 1panel.svg
+│   │   │   ├── abbott.svg
+│   │   │   ├── activision.svg
+│   │   │   ├── index.js
+│   │   │   ├── logmein.svg
+│   │   │   ├── nike.svg
+│   │   │   ├── openjsfoundation.svg
+│   │   │   └── tech.svg
 │   │   ├── images
-│   │   ├── preview
-│   │   │   ├── Desktop
-│   │   │   │   ├── Create
-│   │   │   │   │   └── CreateParcel3.png
-│   │   │   │   └── Home
-│   │   │   │       ├── Hompage1.png
+│   │   │   ├── a-delivery-bike-speeding-through-a-vibrant-bangladesh.jpg
+│   │   │   ├── bgDesign.jpg
+│   │   │   ├── finalLogo.png
+│   │   │   ├── footerBg.jpg
+│   │   │   ├── index.js
+│   │   │   ├── location.jpg
+│   │   │   ├── locationRounded.png
+│   │   │   ├── locationRounded-removebg.png
+│   │   │   ├── logoCircle2.png
+│   │   │   ├── logoCircle.png
+│   │   │   ├── logoFull.jpg
+│   │   │   ├── logoFull-modified.png
+│   │   │   ├── logo.jpg
+│   │   │   ├── preview
+│   │   │   │   ├── Desktop
+│   │   │   │   │   ├── Create
+│   │   │   │   │   │   └── CreateParcel3.png
+│   │   │   │   │   └── Home
+│   │   │   │   │       ├── Hompage1.png
+│   │   │   │   │       └── updatePage2.png
+│   │   │   │   ├── Laptop
+│   │   │   │   │   ├── Create
+│   │   │   │   │   │   └── CreateParcel3.png
+│   │   │   │   │   ├── Home
+│   │   │   │   │   │   └── laptopPreview1.png
+│   │   │   │   │   └── Update
+│   │   │   │   │       └── updatePage2.png
+│   │   │   │   └── Mobile
+│   │   │   │       ├── CreateParcel3.png
+│   │   │   │       ├── mobilePreview1.png
 │   │   │   │       └── updatePage2.png
-│   │   │   ├── Laptop
-│   │   │   │   ├── Create
-│   │   │   │   │   └── CreateParcel3.png
-│   │   │   │   ├── Home
-│   │   │   │   │   └── laptopPreview.png
-│   │   │   │   └── Update
-│   │   │   │       └── updatePage2.png
-│   │   │   └── Mobile
-│   │   │       ├── CreateParcel3.png
-│   │   │       ├── mobilePreview.png
-│   │   │       └── updatePage2.png
-│   │   └── profile.jpg
-│   │   react.svg
+│   │   │   └── profile.jpg
+│   │   ├── react.svg
 │   │   └── screenshots
 │   │       ├── fullpage.png
 │   │       ├── mobileviewFullpage.png
@@ -109,6 +140,7 @@
 │   │   │   ├── components
 │   │   │   │   ├── BangladeshMap.jsx
 │   │   │   │   ├── GontobboInfoPopup.jsx
+│   │   │   │   ├── GontobboSearchBox.jsx
 │   │   │   │   └── ZoneCard.jsx
 │   │   │   ├── gontobbo.constants.js
 │   │   │   └── GontobboZones.jsx
@@ -132,6 +164,13 @@
 │   │   │       ├── ServiceIntro.jsx
 │   │   │       ├── services.constant.js
 │   │   │       └── Services.jsx
+│   │   ├── SendParcel
+│   │   │   ├── components
+│   │   │   │   ├── FormInput.jsx
+│   │   │   │   └── SendParcelForm.jsx
+│   │   │   ├── SendParcel.jsx
+│   │   │   └── utils
+│   │   │       └── handleParcelSubmit.js
 │   │   └── shared
 │   │       ├── BrandLogo
 │   │       │   └── BrandLogo.jsx
@@ -145,12 +184,14 @@
 │   │       │   ├── NavbarStart.jsx
 │   │       │   └── TopNav.jsx
 │   │       └── Spinner.jsx
-│   └── router
-│       ├── authRouter.jsx
-│       └── router.jsx
+│   ├── router
+│   │   ├── authRouter.jsx
+│   │   └── router.jsx
+│   └── utils
+│       └── formValidations.js
 ├── structure.md
 └── vite.config.js
 
-44 directories, 133 files
+48 directories, 142 files
 
 ```
