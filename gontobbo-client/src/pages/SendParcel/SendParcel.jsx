@@ -1,15 +1,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import SendParcelForm from "./components/SendParcelForm";
 import { gontobboZones } from "../gontobboZones/gontobbo.constants";
+const {
+  register,
+  handleSubmit,
+  watch,
+  reset,
+  formState: { errors },
+} = useForm({ mode: "onBlur" });
 
-const handleFormSubmit = (data) => {
-  console.log("📦 Form Data:", data);
-  // Here you can:
-  // - calculate costs
-  // - generate tracking ID
-  // - call axiosSecure.post()
-  // - show Swal
-};
 const onSubmit = async (data) => {
   const { baseCost, weightCost, perKgRate, weight, isNonDocument, total } =
     calculateCostWithBreakdown(data);
