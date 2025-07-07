@@ -1,7 +1,7 @@
-import { FormRadioGroup, FormSelect, FormTextarea } from "../SendParcel";
 import { useForm } from "react-hook-form";
-
+import { FormRadioGroup, FormSelect, FormTextarea } from "../SendParcel";
 import FormInput from "./FormInput";
+import { formValidations } from "../../../utils/formValidations";
 
 const SendParcelForm = ({ onSubmit, serviceCenters }) => {
   const {
@@ -41,18 +41,14 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
             id="title"
             label="Parcel Name"
             register={register}
-            validation={{
-              required: { value: true, message: "Parcel name is required" },
-            }}
+            validation={formValidations.parcel.title}
             error={errors.title}
           />
           <FormRadioGroup
             id="type"
             label="Type"
             register={register}
-            validation={{
-              required: { value: true, message: "Parcel type is required" },
-            }}
+            validation={formValidations.parcel.type}
             error={errors.type}
             options={[
               { value: "document", label: "Document" },
@@ -64,14 +60,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
             label="Weight (kg)"
             type="number"
             register={register}
-            validation={{
-              validate: (val) => {
-                if (parcelType === "non-document" && (!val || val <= 0)) {
-                  return "Weight must be greater than 0 for non-document parcels";
-                }
-                return true;
-              },
-            }}
+            validation={formValidations.parcel.weight(parcelType)}
             error={errors.weight}
             disabled={parcelType !== "non-document"}
           />
@@ -88,9 +77,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
               id="sender_name"
               label="Name"
               register={register}
-              validation={{
-                required: { value: true, message: "Sender name is required" },
-              }}
+              validation={formValidations.person.name}
               error={errors.sender_name}
             />
             <FormInput
@@ -98,18 +85,14 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
               label="Contact"
               type="tel"
               register={register}
-              validation={{
-                required: { value: true, message: "Contact is required" },
-              }}
+              validation={formValidations.person.contact}
               error={errors.sender_contact}
             />
             <FormSelect
               id="sender_region"
               label="Region"
               register={register}
-              validation={{
-                required: { value: true, message: "Region is required" },
-              }}
+              validation={formValidations.location.region}
               error={errors.sender_region}
               options={uniqueRegions}
               defaultValue=""
@@ -119,12 +102,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
               id="sender_center"
               label="Service Center"
               register={register}
-              validation={{
-                required: {
-                  value: true,
-                  message: "Service center is required",
-                },
-              }}
+              validation={formValidations.location.center}
               error={errors.sender_center}
               options={getDistrictsByRegion(senderRegion)}
               defaultValue=""
@@ -135,21 +113,14 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
               id="sender_address"
               label="Address"
               register={register}
-              validation={{
-                required: { value: true, message: "Address is required" },
-              }}
+              validation={formValidations.person.address}
               error={errors.sender_address}
             />
             <FormTextarea
               id="pickup_instruction"
               label="Pickup Instruction"
               register={register}
-              validation={{
-                required: {
-                  value: true,
-                  message: "Pickup instruction is required",
-                },
-              }}
+              validation={formValidations.instruction.pickup}
               error={errors.pickup_instruction}
             />
           </div>
@@ -163,9 +134,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
               id="receiver_name"
               label="Name"
               register={register}
-              validation={{
-                required: { value: true, message: "Receiver name is required" },
-              }}
+              validation={formValidations.person.name}
               error={errors.receiver_name}
             />
             <FormInput
@@ -173,24 +142,14 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
               label="Contact"
               type="tel"
               register={register}
-              validation={{
-                required: {
-                  value: true,
-                  message: "Receiver contact is required",
-                },
-              }}
+              validation={formValidations.person.contact}
               error={errors.receiver_contact}
             />
             <FormSelect
               id="receiver_region"
               label="Region"
               register={register}
-              validation={{
-                required: {
-                  value: true,
-                  message: "Receiver region is required",
-                },
-              }}
+              validation={formValidations.location.region}
               error={errors.receiver_region}
               options={uniqueRegions}
               defaultValue=""
@@ -200,12 +159,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
               id="receiver_center"
               label="Service Center"
               register={register}
-              validation={{
-                required: {
-                  value: true,
-                  message: "Receiver center is required",
-                },
-              }}
+              validation={formValidations.location.center}
               error={errors.receiver_center}
               options={getDistrictsByRegion(receiverRegion)}
               defaultValue=""
@@ -216,24 +170,14 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
               id="receiver_address"
               label="Address"
               register={register}
-              validation={{
-                required: {
-                  value: true,
-                  message: "Receiver address is required",
-                },
-              }}
+              validation={formValidations.person.address}
               error={errors.receiver_address}
             />
             <FormTextarea
               id="delivery_instruction"
               label="Delivery Instruction"
               register={register}
-              validation={{
-                required: {
-                  value: true,
-                  message: "Delivery instruction is required",
-                },
-              }}
+              validation={formValidations.instruction.delivery}
               error={errors.delivery_instruction}
             />
           </div>

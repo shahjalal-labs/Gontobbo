@@ -120,7 +120,7 @@ export const FormTextarea = ({
     />
     <label
       htmlFor={id}
-      className={`absolute left-4 top-3 text-gray-500 text-sm cursor-text
+      className={`absolute left-4 top-0 text-gray-500 text-sm cursor-text
         peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
         peer-focus:top-1 peer-focus:text-sm peer-focus:text-indigo-600
         transition-all duration-300`}
