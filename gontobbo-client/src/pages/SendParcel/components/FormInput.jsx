@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { AnimatePresence } from "motion/react";
 
 const FormInput = ({

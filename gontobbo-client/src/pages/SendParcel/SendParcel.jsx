@@ -1,5 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
+import SendParcelForm from "./components/SendParcelForm";
+import { gontobboZones } from "../gontobboZones/gontobbo.constants";
 
+gontobboZones;
 // --- Reusable Text Input Component ---
 
 // --- Reusable Select Component ---
@@ -140,3 +143,13 @@ export const FormTextarea = ({
 );
 
 // --- Main Form Component ---
+//
+const SendParcel = () => {
+  return (
+    <div>
+      <SendParcelForm serviceCenters={gontobboZones} />;
+    </div>
+  );
+};
+
+export default SendParcel;

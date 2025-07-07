@@ -6,6 +6,7 @@ import Aos from "aos";
 import authRouter from "./authRouter";
 import GontobboZones from "../pages/gontobboZones/GontobboZones";
 import SendParcelForm from "../pages/SendParcel/SendParcel";
+import SendParcel from "../pages/SendParcel/SendParcel";
 
 Aos.init();
 
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "send-parcel",
-        element: <SendParcelForm />,
+        element: <SendParcel />,
       },
     ],
   },

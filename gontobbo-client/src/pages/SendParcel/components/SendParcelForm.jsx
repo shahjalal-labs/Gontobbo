@@ -20,7 +20,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
   const receiverRegion = watch("receiver_region");
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-gradient-to-tr from-gray-50 to-white rounded-3xl shadow-xl border border-gray-200">
+    <div className="max-w-7xl mx-auto p-8 bg-gradient-to-tr from-gray-50 to-white rounded-3xl shadow-xl border border-gray-200">
       <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-12">
         {/* Heading */}
         <header className="text-center mb-8">
