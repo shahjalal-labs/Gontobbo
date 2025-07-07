@@ -1,0 +1,17 @@
+export const testData = {
+  title: "Sample Parcel",
+  type: "non-document",
+  weight: 2,
+  sender_name: "Alice",
+  sender_contact: "01989763779",
+  sender_region: "Dhaka",
+  sender_center: "Dhaka",
+  sender_address: "123, Dhanmondi",
+  pickup_instruction: "Call before pickup",
+  receiver_name: "Bob",
+  receiver_contact: "01540325698",
+  receiver_region: "Chattogram",
+  receiver_center: "Bandarban",
+  receiver_address: "456, Pahartali",
+  delivery_instruction: "Leave at gate",
+};
