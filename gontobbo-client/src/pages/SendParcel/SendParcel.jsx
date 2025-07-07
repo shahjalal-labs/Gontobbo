@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { motion, AnimatePresence } from "motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 // --- Reusable Text Input Component ---
 const FormInput = ({
