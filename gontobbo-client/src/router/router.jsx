@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import authRouter from "./authRouter";
 import GontobboZones from "../pages/gontobboZones/GontobboZones";
+import SendParcelForm from "../pages/SendParcel/SendParcel";
 
 Aos.init();
 
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
         Component: GontobboZones,
       },
       {
-        path: "chk",
-        // Component: Chk,
+        path: "send-parcel",
+        element: <SendParcelForm />,
       },
     ],
   },
