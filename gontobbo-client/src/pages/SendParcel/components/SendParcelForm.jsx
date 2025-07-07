@@ -290,6 +290,8 @@ const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
               validation={formValidations.instruction.delivery}
               error={errors.delivery_instruction}
             />
+
+
           </div>
         </section>
 
