@@ -1,28 +1,93 @@
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import { formValidations } from "../../../utils/formValidations";
 import { FormRadioGroup, FormSelect, FormTextarea } from "../SendParcel";
 import FormInput from "./FormInput";
-import { formValidations } from "../../../utils/formValidations";
+// import axiosSecure from "../../../hooks/useAxiosSecure"; // Uncomment and use when ready
 
-const SendParcelForm = ({ onSubmit, serviceCenters }) => {
+const MySwal = withReactContent(Swal);
+
+const SendParcelForm = ({ onSubmit: _onSubmit, serviceCenters }) => {
   const {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
-
-  const uniqueRegions = [...new Set(serviceCenters.map((w) => w.region))];
-  const getDistrictsByRegion = (region) =>
-    serviceCenters.filter((w) => w.region === region).map((w) => w.district);
 
   const parcelType = watch("type");
   const senderRegion = watch("sender_region");
   const receiverRegion = watch("receiver_region");
 
+  const uniqueRegions = [...new Set(serviceCenters.map((w) => w.region))];
+
+  const getDistrictsByRegion = (region) =>
+    serviceCenters.filter((w) => w.region === region).map((w) => w.district);
+
+  const calculateCost = (data) => {
+    const baseCost = 100;
+    const perKgRate = 50;
+    const weightCost =
+      data.type === "non-document" && data.weight
+        ? parseFloat(data.weight) * perKgRate
+        : 0;
+    return baseCost + weightCost;
+  };
+
+  const generateTrackingId = () =>
+    "TRK-" + Math.random().toString(36).substring(2, 10).toUpperCase();
+
+  const onSubmit = async (data) => {
+    const cost = calculateCost(data);
+    const trackingId = generateTrackingId();
+
+    const confirm = await MySwal.fire({
+      title: "Confirm Parcel Details",
+      html: `
+        <div class="text-left text-sm leading-relaxed">
+          <strong>Parcel:</strong> ${data.title} (${data.type})<br/>
+          <strong>Sender:</strong> ${data.sender_name} (${data.sender_contact})<br/>
+          <strong>Receiver:</strong> ${data.receiver_name} (${data.receiver_contact})<br/>
+          <strong>Tracking ID:</strong> ${trackingId}<br/>
+          <strong>Total Cost:</strong> ৳${cost}
+        </div>
+      `,
+      showCancelButton: true,
+      confirmButtonText: "Confirm & Submit",
+    });
+
+    if (confirm.isConfirmed) {
+      /* Uncomment and implement when ready
+      try {
+        const response = await axiosSecure.post("/parcels", {
+          ...data,
+          cost,
+          tracking_id: trackingId,
+          status: "Pending",
+          created_at: new Date(),
+        });
+
+        if (response?.data?.insertedId) {
+          Swal.fire("✅ Success", "Parcel submitted successfully!", "success");
+          reset();
+        } else {
+          throw new Error("Insert failed");
+        }
+      } catch (err) {
+        Swal.fire("❌ Error", "Something went wrong. Try again.", "error");
+      }
+      */
+
+      alert("📦 Parcel submitted successfully!");
+      reset();
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto p-8 bg-gradient-to-tr from-gray-50 to-white rounded-3xl shadow-xl border border-gray-200">
       <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-12">
-        {/* Heading */}
         <header className="text-center mb-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
             📦 Send a Parcel
@@ -32,7 +97,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
           </p>
         </header>
 
-        {/* Parcel Info */}
+        {/* 📦 Parcel Info */}
         <section className="space-y-6 bg-white p-6 rounded-2xl shadow-md border border-gray-100">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Parcel Info
@@ -66,7 +131,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
           />
         </section>
 
-        {/* Sender & Receiver Info */}
+        {/* 👤 Sender & Receiver */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Sender Info */}
           <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 space-y-6">
@@ -183,7 +248,7 @@ const SendParcelForm = ({ onSubmit, serviceCenters }) => {
           </div>
         </section>
 
-        {/* Submit Button */}
+        {/* ✅ Submit */}
         <div className="text-center">
           <button
             type="submit"

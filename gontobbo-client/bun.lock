@@ -24,6 +24,7 @@
         "react-responsive-carousel": "^3.2.23",
         "react-router": "^7.6.2",
         "sweetalert2": "^11.22.1",
+        "sweetalert2-react-content": "^5.1.0",
         "tailwindcss": "^4.1.10",
       },
       "devDependencies": {
@@ -693,6 +694,8 @@
     "supports-color": ["supports-color@7.2.0", "", { "dependencies": { "has-flag": "^4.0.0" } }, "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw=="],
 
     "sweetalert2": ["sweetalert2@11.22.1", "", {}, "sha512-3dGb50jlfcJ0OHZ5D4hJWK/cIYAfCnxK5QQVndOJqhyiCYJozINEfHG7wvRbkACj60hDnPWu+t9EFcbYWaSEuQ=="],
+
+    "sweetalert2-react-content": ["sweetalert2-react-content@5.1.0", "", { "peerDependencies": { "react": "^18.0.0 || ^19.0.0", "react-dom": "^18.0.0 || ^19.0.0", "sweetalert2": "^11.0.0" } }, "sha512-SBh41SdyHDY9NzwrIG6LACbClCMxIlEFP86tGVr/B4zGD4H2gGXB8o7UAJRc/RtBd/iQL9hIvuCAkrk0AgKEMA=="],
 
     "tailwindcss": ["tailwindcss@4.1.10", "", {}, "sha512-P3nr6WkvKV/ONsTzj6Gb57sWPMX29EPNPopo7+FcpkQaNsrNpZ1pv8QmrYI2RqEKD7mlGqLnGovlcYnBK0IqUA=="],
 
