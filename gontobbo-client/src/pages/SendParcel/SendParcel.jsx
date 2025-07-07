@@ -143,11 +143,22 @@ export const FormTextarea = ({
 );
 
 // --- Main Form Component ---
-//
+const handleFormSubmit = (data) => {
+  console.log("📦 Form Data:", data);
+  // Here you can:
+  // - calculate costs
+  // - generate tracking ID
+  // - call axiosSecure.post()
+  // - show Swal
+};
 const SendParcel = () => {
   return (
     <div>
-      <SendParcelForm serviceCenters={gontobboZones} />;
+      <SendParcelForm
+        serviceCenters={gontobboZones}
+        onSubmit={handleFormSubmit}
+      />
+      ;
     </div>
   );
 };
