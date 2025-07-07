@@ -2,10 +2,11 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { formValidations } from "../../../utils/formValidations";
-import { FormRadioGroup, FormSelect, FormTextarea } from "../SendParcel";
+import { FormRadioGroup, FormTextarea } from "../SendParcel";
 import FormInput from "./FormInput";
 import { useEffect } from "react";
 import { testData } from "../sendpercel.constant";
+import FormSelect from "./SendParecelFormSelect";
 // import axiosSecure from "../../../hooks/useAxiosSecure"; // Uncomment and use when ready
 
 const MySwal = withReactContent(Swal);
