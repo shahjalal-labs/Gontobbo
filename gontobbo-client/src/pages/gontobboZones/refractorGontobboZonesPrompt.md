@@ -20,12 +20,13 @@ Refactor the entire codebase **without modifying any UI or changing behavior**. 
 - ✅ 100% programmatical
 - ✅ give in a way so I can view what are you modifying what should change to what
 - ✅ first give in copy code block
-- ✅ if then i consent then you will give me the nameMathced.sh
+- ✅ if then i consent then you will give me the nameMathced.sh file also give the command to create the file
 
 👉 Output the refactored code to a new folder: `gontobboZones_refactored`
 
 Also return a `.sh` script that will:
 
+- it will give when i consent
 - Create that folder
 - Write all refactored files
 - Run `git add` and `git commit` with message: `refactor: added improved gontobboZones version`
