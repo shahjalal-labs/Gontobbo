@@ -1,69 +1,70 @@
 import { formValidations } from "../../../utils/formValidations";
 import FormInput from "./FormInput";
-import FormSelect from "./FormSelect";
+import FormSelect from "./SendParecelFormSelect";
+import FormTextarea from "./SendPercelFormTextArea";
 
-const SenderInfo = ({
+const RecieverInfo = ({
   register,
   errors,
   uniqueRegions,
   getDistrictsByRegion,
-  senderRegion,
+  receiverRegion,
 }) => {
   return (
-    <section className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 space-y-6">
-      <h2 className="text-2xl font-semibold text-gray-800">Sender Info</h2>
+    <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 space-y-6">
+      <h2 className="text-2xl font-semibold text-gray-800">Receiver Info</h2>
       <FormInput
-        id="sender_name"
+        id="receiver_name"
         label="Name"
         register={register}
         validation={formValidations.person.name}
-        error={errors.sender_name}
+        error={errors.receiver_name}
       />
       <FormInput
-        id="sender_contact"
+        id="receiver_contact"
         label="Contact"
         type="tel"
         register={register}
         validation={formValidations.person.contact}
-        error={errors.sender_contact}
+        error={errors.receiver_contact}
       />
       <FormSelect
-        id="sender_region"
+        id="receiver_region"
         label="Region"
         register={register}
         validation={formValidations.location.region}
-        error={errors.sender_region}
+        error={errors.receiver_region}
         options={uniqueRegions}
         defaultValue=""
         placeholder="Select Region"
       />
       <FormSelect
-        id="sender_center"
+        id="receiver_center"
         label="Service Center"
         register={register}
         validation={formValidations.location.center}
-        error={errors.sender_center}
-        options={getDistrictsByRegion(senderRegion)}
+        error={errors.receiver_center}
+        options={getDistrictsByRegion(receiverRegion)}
         defaultValue=""
         placeholder="Select Service Center"
-        disabled={!senderRegion}
+        disabled={!receiverRegion}
       />
       <FormInput
-        id="sender_address"
+        id="receiver_address"
         label="Address"
         register={register}
         validation={formValidations.person.address}
-        error={errors.sender_address}
+        error={errors.receiver_address}
       />
       <FormTextarea
-        id="pickup_instruction"
-        label="Pickup Instruction"
+        id="delivery_instruction"
+        label="Delivery Instruction"
         register={register}
-        validation={formValidations.instruction.pickup}
-        error={errors.pickup_instruction}
+        validation={formValidations.instruction.delivery}
+        error={errors.delivery_instruction}
       />
-    </section>
+    </div>
   );
 };
 
-export default SenderInfo;
+export default RecieverInfo;

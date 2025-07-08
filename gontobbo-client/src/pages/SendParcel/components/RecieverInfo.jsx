@@ -1,7 +1,7 @@
 import { formValidations } from "../../../utils/formValidations";
 import FormInput from "./FormInput";
-import FormSelect from "./SendParecelFormSelect";
-import FormTextarea from "./SendPercelFormTextArea";
+import FormSelect from "./FormSelect";
+import FormTextarea from "./FormTextarea";
 
 const RecieverInfo = ({
   register,
@@ -11,7 +11,7 @@ const RecieverInfo = ({
   receiverRegion,
 }) => {
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 space-y-6">
+    <section className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 space-y-6">
       <h2 className="text-2xl font-semibold text-gray-800">Receiver Info</h2>
       <FormInput
         id="receiver_name"
@@ -63,7 +63,7 @@ const RecieverInfo = ({
         validation={formValidations.instruction.delivery}
         error={errors.delivery_instruction}
       />
-    </div>
+    </section>
   );
 };
 

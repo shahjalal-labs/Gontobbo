@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { AnimatePresence } from "motion/react";
 
 const FormInput = ({
   id,
@@ -10,10 +11,11 @@ const FormInput = ({
   disabled = false,
   placeholder = " ",
 }) => (
-  <div>
-    <label htmlFor={id} className="text-gray-400">
+  <div className="">
+    <label htmlFor={id} className={`text-gray-400`}>
       {label}
     </label>
+
     <input
       type={type}
       id={id}
@@ -27,6 +29,7 @@ const FormInput = ({
         ${error ? "border-red-500" : "border-gray-300"}`}
       autoComplete="off"
     />
+
     {error && (
       <motion.p
         initial={{ opacity: 0, y: -5 }}
