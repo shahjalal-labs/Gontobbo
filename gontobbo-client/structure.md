@@ -107,8 +107,10 @@
 │   ├── firebase
 │   │   └── firebase.init.js
 │   ├── hooks
+│   │   ├── GeminiChatBox.jsx
 │   │   ├── useAuth.jsx
-│   │   └── useHelmet.jsx
+│   │   ├── useHelmet.jsx
+│   │   └── useParcelForm.js
 │   ├── index.css
 │   ├── layout
 │   │   ├── AuthLayout.jsx
@@ -164,13 +166,19 @@
 │   │   │       ├── ServiceIntro.jsx
 │   │   │       ├── services.constant.js
 │   │   │       └── Services.jsx
+│   │   ├── rebuild-sendparcel.sh
 │   │   ├── SendParcel
 │   │   │   ├── components
 │   │   │   │   ├── FormInput.jsx
-│   │   │   │   └── SendParcelForm.jsx
+│   │   │   │   ├── FormSelect.jsx
+│   │   │   │   ├── FormTextarea.jsx
+│   │   │   │   ├── ParcelInfo.jsx
+│   │   │   │   ├── RecieverInfo.jsx
+│   │   │   │   ├── SenderInfo.jsx
+│   │   │   │   ├── SendParcelForm.jsx
+│   │   │   │   └── SendParcleFormRadioGroup.jsx
 │   │   │   ├── SendParcel.jsx
-│   │   │   └── utils
-│   │   │       └── handleParcelSubmit.js
+│   │   │   └── sendpercel.constant.js
 │   │   └── shared
 │   │       ├── BrandLogo
 │   │       │   └── BrandLogo.jsx
@@ -188,10 +196,11 @@
 │   │   ├── authRouter.jsx
 │   │   └── router.jsx
 │   └── utils
+│       ├── costCalculator.js
 │       └── formValidations.js
 ├── structure.md
 └── vite.config.js
 
-48 directories, 142 files
+47 directories, 152 files
 
 ```
