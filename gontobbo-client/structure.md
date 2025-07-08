@@ -145,7 +145,20 @@
 │   │   │   │   ├── GontobboSearchBox.jsx
 │   │   │   │   └── ZoneCard.jsx
 │   │   │   ├── gontobbo.constants.js
-│   │   │   └── GontobboZones.jsx
+│   │   │   ├── GontobboZones.jsx
+│   │   │   └── refractorGontobboZonesPrompt.md
+│   │   ├── gontobboZones_refactored
+│   │   │   ├── components
+│   │   │   │   ├── BangladeshMap.jsx
+│   │   │   │   ├── GontobboSearchBox.jsx
+│   │   │   │   └── InfoPopup.jsx
+│   │   │   ├── constants
+│   │   │   │   └── zones.js
+│   │   │   ├── GontobboZones.jsx
+│   │   │   ├── hooks
+│   │   │   │   └── useZoneFilter.js
+│   │   │   └── utils
+│   │   │       └── string.js
 │   │   ├── Home
 │   │   │   ├── Banner
 │   │   │   │   ├── banner.constant.js
@@ -177,8 +190,31 @@
 │   │   │   │   ├── SenderInfo.jsx
 │   │   │   │   ├── SendParcelForm.jsx
 │   │   │   │   └── SendParcleFormRadioGroup.jsx
+│   │   │   ├── refractorSendParcelPrompt.md
 │   │   │   ├── SendParcel.jsx
-│   │   │   └── sendpercel.constant.js
+│   │   │   ├── sendpercel.constant.js
+│   │   │   └── setup_sendparcel_refactor.sh
+│   │   ├── SendParcel_refactored
+│   │   │   ├── components
+│   │   │   │   ├── FormInput.jsx
+│   │   │   │   ├── FormRadioGroup.jsx
+│   │   │   │   ├── FormSelect.jsx
+│   │   │   │   ├── FormTextarea.jsx
+│   │   │   │   ├── ParcelInfo.jsx
+│   │   │   │   ├── ReceiverInfo.jsx
+│   │   │   │   ├── SenderInfo.jsx
+│   │   │   │   └── SendParcelForm.jsx
+│   │   │   ├── constants
+│   │   │   │   └── sendParcel.testData.js
+│   │   │   ├── hooks
+│   │   │   │   └── useSendParcel.js
+│   │   │   ├── SendParcel.jsx
+│   │   │   ├── services
+│   │   │   │   └── parcelService.js
+│   │   │   └── utils
+│   │   │       └── regionUtils.js
+│   │   ├── setup_gontobboZones_refactor.sh
+│   │   ├── setup_sendparcel_refactor.sh
 │   │   └── shared
 │   │       ├── BrandLogo
 │   │       │   └── BrandLogo.jsx
@@ -201,6 +237,6 @@
 ├── structure.md
 └── vite.config.js
 
-47 directories, 152 files
+58 directories, 177 files
 
 ```

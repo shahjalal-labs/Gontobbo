@@ -1,6 +1,6 @@
 import ParcelInfo from "./ParcelInfo";
 import SenderInfo from "./SenderInfo";
-import RecieverInfo from "./RecieverInfo";
+import ReceiverInfo from "./ReceiverInfo";
 
 const SendParcelForm = ({
   onSubmit,
@@ -33,7 +33,7 @@ const SendParcelForm = ({
           senderRegion={senderRegion}
         />
         {/* 👤 Receiver Info */}
-        <RecieverInfo
+        <ReceiverInfo
           register={register}
           errors={errors}
           uniqueRegions={uniqueRegions}

@@ -1,6 +1,6 @@
 import { formValidations } from "../../../utils/formValidations";
 import FormInput from "./FormInput";
-import { FormRadioGroup } from "./SendParcleFormRadioGroup";
+import { FormRadioGroup } from "./FormRadioGroup";
 
 const ParcelInfo = ({ register, errors, parcelType }) => {
   return (
