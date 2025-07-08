@@ -38,14 +38,8 @@ const SendParcel = () => {
   } = useForm({ mode: "onBlur" });
 
   const onSubmit = async (data) => {
-    const {
-      baseCost,
-      weightCost,
-      perKgRate,
-      weight,
-      isNonDocument,
-      total,
-    } = calculateCostWithBreakdown(data);
+    const { baseCost, weightCost, perKgRate, weight, isNonDocument, total } =
+      calculateCostWithBreakdown(data);
     const trackingId = generateTrackingId();
 
     const confirm = await MySwal.fire({
@@ -110,7 +104,8 @@ const SendParcel = () => {
     <div className="max-w-7xl mx-auto p-8 bg-gradient-to-tr from-gray-50 to-white rounded-3xl shadow-xl border border-gray-200">
       <SendParcelForm
         serviceCenters={gontobboZones}
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={onSubmit} // Pass your onSubmit handler
+        handleSubmit={handleSubmit} // Pass the react-hook-form's handleSubmit function
         register={register}
         watch={watch}
         reset={reset}

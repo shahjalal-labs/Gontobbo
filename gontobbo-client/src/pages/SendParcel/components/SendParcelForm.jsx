@@ -17,18 +17,12 @@ const SendParcelForm = ({
 
   const uniqueRegions = [...new Set(serviceCenters.map((w) => w.region))];
   const getDistrictsByRegion = (region) =>
-    serviceCenters
-      .filter((w) => w.region === region)
-      .map((w) => w.district);
+    serviceCenters.filter((w) => w.region === region).map((w) => w.district);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-12">
       {/* 📦 Parcel Info */}
-      <ParcelInfo
-        register={register}
-        errors={errors}
-        parcelType={parcelType}
-      />
+      <ParcelInfo register={register} errors={errors} parcelType={parcelType} />
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* 👤 Sender Info */}
         <SenderInfo

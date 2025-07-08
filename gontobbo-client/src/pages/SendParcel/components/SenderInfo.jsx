@@ -1,6 +1,7 @@
 import { formValidations } from "../../../utils/formValidations";
 import FormInput from "./FormInput";
 import FormSelect from "./FormSelect";
+import FormTextarea from "./FormTextarea";
 
 const SenderInfo = ({
   register,
