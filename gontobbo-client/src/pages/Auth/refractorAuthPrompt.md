@@ -21,6 +21,7 @@ Refactor the entire codebase **without modifying any UI or changing behavior**. 
 👉 Output the refactored code to a new folder: `Auth_refactored`
 
 Also return a `.sh` script that will:
+
 - Create that folder
 - Write all refactored files
 - Run `git add` and `git commit` with message: `refactor: added improved Auth version`
@@ -51,83 +52,6 @@ Also return a `.sh` script that will:
 │   │   ├── LottieAnimation.jsx
 │   │   └── motion.js
 │   ├── App.jsx
-│   ├── assets
-│   │   ├── Brands
-│   │   │   ├── 1panel.svg
-│   │   │   ├── abbott.svg
-│   │   │   ├── activision.svg
-│   │   │   ├── index.js
-│   │   │   ├── logmein.svg
-│   │   │   ├── nike.svg
-│   │   │   ├── openjsfoundation.svg
-│   │   │   └── tech.svg
-│   │   ├── images
-│   │   │   ├── a-delivery-bike-speeding-through-a-vibrant-bangladesh.jpg
-│   │   │   ├── bgDesign.jpg
-│   │   │   ├── finalLogo.png
-│   │   │   ├── footerBg.jpg
-│   │   │   ├── index.js
-│   │   │   ├── location.jpg
-│   │   │   ├── locationRounded.png
-│   │   │   ├── locationRounded-removebg.png
-│   │   │   ├── logoCircle2.png
-│   │   │   ├── logoCircle.png
-│   │   │   ├── logoFull.jpg
-│   │   │   ├── logoFull-modified.png
-│   │   │   ├── logo.jpg
-│   │   │   ├── preview
-│   │   │   │   ├── Desktop
-│   │   │   │   │   ├── Create
-│   │   │   │   │   │   └── CreateParcel3.png
-│   │   │   │   │   └── Home
-│   │   │   │   │       ├── Hompage1.png
-│   │   │   │   │       └── updatePage2.png
-│   │   │   │   ├── Laptop
-│   │   │   │   │   ├── Create
-│   │   │   │   │   │   └── CreateParcel3.png
-│   │   │   │   │   ├── Home
-│   │   │   │   │   │   └── laptopPreview1.png
-│   │   │   │   │   └── Update
-│   │   │   │   │       └── updatePage2.png
-│   │   │   │   └── Mobile
-│   │   │   │       ├── CreateParcel3.png
-│   │   │   │       ├── mobilePreview1.png
-│   │   │   │       └── updatePage2.png
-│   │   │   └── profile.jpg
-│   │   ├── react.svg
-│   │   └── screenshots
-│   │       ├── fullpage.png
-│   │       ├── mobileviewFullpage.png
-│   │       ├── preview
-│   │       │   ├── desktopPreview.pdf
-│   │       │   ├── desktopPreview.png
-│   │       │   ├── laptopPreview.pdf
-│   │       │   ├── laptopPreview.png
-│   │       │   ├── mobilePreview.pdf
-│   │       │   └── mobilePreview.png
-│   │       ├── ss-10-18-55-AM_28-06-25.png
-│   │       ├── ss-10-19-51-AM_28-06-25.png
-│   │       ├── ss-10-24-03-AM_28-06-25.png
-│   │       ├── ss-10-24-25-AM_28-06-25.png
-│   │       ├── ss-10-24-49-AM_28-06-25.png
-│   │       ├── ss-10-25-39-AM_28-06-25.png
-│   │       ├── ss-10-27-08-AM_28-06-25.png
-│   │       ├── ss-10-38-51-AM_28-06-25.png
-│   │       ├── ss-10-39-17-AM_28-06-25.png
-│   │       ├── ss-10-39-34-AM_28-06-25.png
-│   │       ├── ss-10-40-55-AM_28-06-25.png
-│   │       ├── ss-10-41-19-AM_28-06-25.png
-│   │       ├── ss-10-46-00-AM_28-06-25.png
-│   │       ├── ss-10-46-22-AM_28-06-25.png
-│   │       ├── ss-10-46-48-AM_28-06-25.png
-│   │       ├── ss-10-47-08-AM_28-06-25.png
-│   │       ├── ss-10-47-26-AM_28-06-25.png
-│   │       ├── ss-10-47-44-AM_28-06-25.png
-│   │       ├── ss-11-26-15-AM_28-06-25.png
-│   │       ├── ss-11-26-35-AM_28-06-25.png
-│   │       ├── ss-11-26-58-AM_28-06-25.png
-│   │       ├── ss-11-27-22-AM_28-06-25.png
-│   │       └── ss-11-27-45-AM_28-06-25.png
 │   ├── contexts
 │   │   └── AuthContext
 │   │       ├── AuthContext.jsx
@@ -157,11 +81,10 @@ Also return a `.sh` script that will:
 │   │   │   │   ├── SignUpPasswordInputs.jsx
 │   │   │   │   └── SocialLogin.jsx
 │   │   │   ├── index.js
-│   │   │   ├── pages
-│   │   │   │   ├── ForgotPass.jsx
-│   │   │   │   ├── Signin.jsx
-│   │   │   │   └── SignUp.jsx
-│   │   │   └── refractorAuthPrompt.md
+│   │   │   └── pages
+│   │   │       ├── ForgotPass.jsx
+│   │   │       ├── Signin.jsx
+│   │   │       └── SignUp.jsx
 │   │   ├── Authentication
 │   │   │   ├── Login
 │   │   │   │   └── Login.jsx
@@ -230,7 +153,7 @@ Also return a `.sh` script that will:
 ├── structure.md
 └── vite.config.js
 
-47 directories, 152 files
+33 directories, 88 files
 ```
 
 ## 📁 Target Module Tree (Auth)
@@ -248,18 +171,18 @@ Also return a `.sh` script that will:
 │   ├── SignUpPasswordInputs.jsx
 │   └── SocialLogin.jsx
 ├── index.js
-├── pages
-│   ├── ForgotPass.jsx
-│   ├── Signin.jsx
-│   └── SignUp.jsx
-└── refractorAuthPrompt.md
+└── pages
+    ├── ForgotPass.jsx
+    ├── Signin.jsx
+    └── SignUp.jsx
 
-3 directories, 14 files
+3 directories, 13 files
 ```
 
 ## 📄 Module Files & Contents
 
 ### `AuthLayout.jsx`
+
 ```javascript
 import { Outlet } from "react-router";
 import AuthSidebar from "./components/AuthSidebar";
@@ -285,6 +208,7 @@ export default AuthLayout;
 ```
 
 ### `components/AuthSidebar.jsx`
+
 ```javascript
 import { sidebarDatas } from "./constant";
 import SideBarCard from "./SideBarCard";
@@ -307,6 +231,7 @@ export default AuthSidebar;
 ```
 
 ### `components/constant.js`
+
 ```javascript
 export const sidebarDatas = [
   {
@@ -363,6 +288,7 @@ export const sidebarDatas = [
 ```
 
 ### `components/SideBarCard.jsx`
+
 ```javascript
 const SideBarCard = ({ sideBar }) => {
   const { title, description } = sideBar;
@@ -380,6 +306,7 @@ export default SideBarCard;
 ```
 
 ### `components/SigninForm.jsx`
+
 ```javascript
 import { Link } from "react-router";
 import SocialLogin from "./SocialLogin";
@@ -426,6 +353,7 @@ export default SigninForm;
 ```
 
 ### `components/Signout.jsx`
+
 ```javascript
 import Swal from "sweetalert2";
 import useAuth from "../../../hooks/useAuth";
@@ -455,6 +383,7 @@ export default Signout;
 ```
 
 ### `components/SignUpForm.jsx`
+
 ```javascript
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
@@ -579,6 +508,7 @@ export default SignUpForm;
 ```
 
 ### `components/SignUpPasswordInputs.jsx`
+
 ```javascript
 import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router";
@@ -638,6 +568,7 @@ export default SignUpPasswordInputs;
 ```
 
 ### `components/SocialLogin.jsx`
+
 ```javascript
 import { useLocation, useNavigate } from "react-router";
 import Swal from "sweetalert2";
@@ -718,6 +649,7 @@ export default SocialLogin;
 ```
 
 ### `index.js`
+
 ```javascript
 import Signin from "./pages/Signin";
 import SignUp from "./pages/SignUp";
@@ -729,6 +661,7 @@ export { Signin, SignUp, SocialLogin, AuthSidebar, SigninForm, AuthLayoout };
 ```
 
 ### `pages/ForgotPass.jsx`
+
 ```javascript
 import { motion } from "motion/react";
 import { Link } from "react-router";
@@ -801,6 +734,7 @@ export default ForgotPassword;
 ```
 
 ### `pages/Signin.jsx`
+
 ```javascript
 import { authLottie } from "../../../animation";
 import LottieAnimation from "../../../animation/LottieAnimation";
@@ -844,6 +778,7 @@ export default Signin;
 ```
 
 ### `pages/SignUp.jsx`
+
 ```javascript
 import { authLottie } from "../../../animation";
 import LottieAnimation from "../../../animation/LottieAnimation";
@@ -884,9 +819,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
-```
-
-### `refractorAuthPrompt.md`
-```md
-
 ```
