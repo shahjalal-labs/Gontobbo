@@ -1,4 +1,4 @@
-export const testData = {
+export const defaultTestData = {
   title: "Sample Parcel",
   type: "non-document",
   weight: 2,

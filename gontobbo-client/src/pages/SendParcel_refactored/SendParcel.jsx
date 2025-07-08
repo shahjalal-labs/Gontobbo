@@ -1,6 +1,6 @@
 import SendParcelForm from "./components/SendParcelForm";
-import { useParcelForm } from "../../hooks/useParcelForm";
 import { gontobboZones } from "../gontobboZones/gontobbo.constants";
+import { useParcelForm } from "../../hooks/useParcelForm";
 
 const SendParcel = () => {
   const { register, handleSubmit, watch, reset, errors, onSubmit } =

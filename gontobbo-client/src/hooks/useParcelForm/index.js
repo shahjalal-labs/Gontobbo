@@ -1,7 +1,7 @@
 import { useParcelFormCore } from "./useParcelFormCore";
 import { useParcelKeyShortcut } from "./useParcelKeyShortcut";
 import { handleParcelSubmit } from "./parcelSubmitHandler";
-import { testData as defaultTestData } from "../SendParcel/constants/sendParcel.testData";
+import { defaultTestData } from "../../pages/SendParcel_refactored/constants/sendParcel.testData";
 
 export function useParcelForm() {
   const {
