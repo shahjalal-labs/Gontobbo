@@ -2,7 +2,6 @@
 
 ```bash
 .
-├── 1.md
 ├── bun.lock
 ├── demo.mp4
 ├── eslint.config.js
@@ -129,10 +128,11 @@
 │   │   │   │   ├── SignUpPasswordInputs.jsx
 │   │   │   │   └── SocialLogin.jsx
 │   │   │   ├── index.js
-│   │   │   └── pages
-│   │   │       ├── ForgotPass.jsx
-│   │   │       ├── Signin.jsx
-│   │   │       └── SignUp.jsx
+│   │   │   ├── pages
+│   │   │   │   ├── ForgotPass.jsx
+│   │   │   │   ├── Signin.jsx
+│   │   │   │   └── SignUp.jsx
+│   │   │   └── refractorAuthPrompt.md
 │   │   ├── Authentication
 │   │   │   ├── Login
 │   │   │   │   └── Login.jsx
