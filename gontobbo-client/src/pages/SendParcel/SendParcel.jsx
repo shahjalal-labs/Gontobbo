@@ -2,6 +2,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import SendParcelForm from "./components/SendParcelForm";
 import { gontobboZones } from "../gontobboZones/gontobbo.constants";
 import { useForm } from "react-hook-form";
+import withReactContent from "sweetalert2-react-content";
+import Swal from "sweetalert2";
+
+const MySwal = withReactContent(Swal);
 
 const onSubmit = async (data) => {
   const { baseCost, weightCost, perKgRate, weight, isNonDocument, total } =
@@ -35,7 +39,7 @@ const onSubmit = async (data) => {
 
   if (confirm.isConfirmed) {
     /* Uncomment and implement when ready
-      try {
+     try {
         const response = await axiosSecure.post("/parcels", {
           ...data,
           cost: total,
@@ -49,7 +53,7 @@ const onSubmit = async (data) => {
           reset();
         } else {
           throw new Error("Insert failed");
-        }
+        };
       } catch (err) {
         Swal.fire("❌ Error", "Something went wrong. Try again.", "error");
       }
@@ -72,7 +76,7 @@ const SendParcel = () => {
     <div>
       <SendParcelForm
         serviceCenters={gontobboZones}
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(onSubmit)}
         register={register}
         watch={watch}
         reset={reset}

@@ -1,13 +1,9 @@
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 import { useEffect } from "react";
 import { testData } from "../sendpercel.constant";
 import ParcelInfo from "./ParcelInfo";
 import SenderInfo from "./SenderInfo";
 import ReceiverInfo from "./RecieverInfo";
 // import axiosSecure from "../../../hooks/useAxiosSecure"; // Uncomment and use when ready
-
-const MySwal = withReactContent(Swal);
 
 const SendParcelForm = ({
   onSubmit,
