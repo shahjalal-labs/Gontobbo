@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import authRouter from "./authRouter";
 import GeminiChatBox from "../hooks/GeminiChatBox";
-import SendParcel from "../pages/SendParcel/SendParcel";
+// import SendParcel from "../pages/SendParcel/SendParcel";
 import GontobboZones from "../pages/gontobboZones_refactored/GontobboZones";
 
 Aos.init();
