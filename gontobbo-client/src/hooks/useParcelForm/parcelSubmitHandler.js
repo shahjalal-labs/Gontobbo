@@ -12,12 +12,6 @@ export const handleParcelSubmit = async (data, reset) => {
   const cost = calculateCostWithBreakdown(data);
   const trackingId = generateTrackingId();
 
-  console.log(
-    { ...data, trackingId, totalCost: cost.total },
-    "parcelSubmitHandler.js",
-    11,
-  );
-
   const confirm = await MySwal.fire({
     title: "📦 Confirm Parcel Details",
     html: renderParcelSummaryHtml(data, trackingId, cost),
@@ -27,5 +21,10 @@ export const handleParcelSubmit = async (data, reset) => {
 
   if (confirm.isConfirmed) {
     reset();
+    console.log(
+      { ...data, trackingId, totalCost: cost.total },
+      "parcelSubmitHandler.js",
+      11,
+    );
   }
 };

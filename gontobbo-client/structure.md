@@ -109,7 +109,12 @@
 │   │   ├── GeminiChatBox.jsx
 │   │   ├── useAuth.jsx
 │   │   ├── useHelmet.jsx
-│   │   └── useParcelForm.js
+│   │   └── useParcelForm
+│   │       ├── index.js
+│   │       ├── parcelSubmitHandler.js
+│   │       ├── renderParcelSummaryHtml.js
+│   │       ├── useParcelFormCore.js
+│   │       └── useParcelKeyShortcut.js
 │   ├── index.css
 │   ├── layout
 │   │   ├── AuthLayout.jsx
@@ -237,6 +242,6 @@
 ├── structure.md
 └── vite.config.js
 
-58 directories, 177 files
+59 directories, 181 files
 
 ```
