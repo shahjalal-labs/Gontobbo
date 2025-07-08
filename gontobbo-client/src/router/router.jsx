@@ -4,11 +4,12 @@ import Home from "../pages/Home/Home/Home";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import authRouter from "./authRouter";
-import GontobboZones from "../pages/gontobboZones/GontobboZones";
+// import GontobboZones from "../pages/gontobboZones/GontobboZones";
 // import SendParcelForm from "../pages/SendParcel/SendParcel";
 // import SendParcel from "../pages/SendParcel/SendParcel";
 import GeminiChatBox from "../hooks/GeminiChatBox";
 import SendParcel from "../pages/SendParcel/SendParcel";
+import GontobboZones from "../pages/gontobboZones_refactored/GontobboZones";
 
 Aos.init();
 
