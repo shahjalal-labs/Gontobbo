@@ -40,6 +40,12 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <DashboardLayout />,
+    children: [
+      {
+        path: "my-parcel",
+        element: <div>My Parcel</div>,
+      },
+    ],
   },
 ]);
 

@@ -1,10 +1,10 @@
-import { Link } from "react-router";
+import { Link, Outlet } from "react-router";
 import BrandLogo from "../pages/shared/BrandLogo/BrandLogo";
 
 const DashboardLayout = () => {
   return (
     <div className="max-container">
-      <div className="drawer lg:drawer-open">
+      <div className="drawer-end lg:drawer-open">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           {/* Navbar */}
@@ -44,7 +44,8 @@ const DashboardLayout = () => {
             </div>
           </div>
           {/* Page content here */}
-          Content
+          <Outlet />
+          {/* Page content here */}
         </div>
         <div className="drawer-side">
           <label
@@ -59,7 +60,7 @@ const DashboardLayout = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/my-parcel">My Parcels</Link>
+              <Link to="/dashboard/my-parcel">My Parcels</Link>
             </li>
           </ul>
         </div>
