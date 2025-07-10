@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router";
 import BrandLogo from "../pages/shared/BrandLogo/BrandLogo";
 
 const DashboardLayout = () => {
-  intro.name();
+  // intro.name();
 
   return (
     <div className="max-container">
