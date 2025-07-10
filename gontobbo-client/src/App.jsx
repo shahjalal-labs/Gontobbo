@@ -6,10 +6,6 @@ import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   return (
-
-
-
-
     <HelmetProvider>
       <AuthProvider>
         <div className=" text-gray-500 font-roboto">
