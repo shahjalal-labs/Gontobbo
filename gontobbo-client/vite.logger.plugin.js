@@ -5,6 +5,24 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+function formatTimestamp(date = new Date()) {
+  const pad = (n) => n.toString().padStart(2, "0");
+
+  let hours = date.getHours();
+  const minutes = pad(date.getMinutes());
+  const seconds = pad(date.getSeconds());
+  const day = pad(date.getDate());
+  const month = pad(date.getMonth() + 1);
+  const year = date.getFullYear().toString().slice(-2);
+
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12; // convert 0 to 12 for 12 AM
+
+  const hourStr = pad(hours);
+
+  return `${hourStr}:${minutes} ${ampm} ${day}-${month}-${year}`;
+}
+
 export default function viteLoggerPlugin() {
   // Prepare paths
   const logDir = path.resolve(__dirname, "src/console");
@@ -33,7 +51,8 @@ export default function viteLoggerPlugin() {
                 ? JSON.stringify(arg, null, 2)
                 : String(arg),
             );
-            const msg = `[${new Date().toISOString()}] ${stringifyArgs.join(" ")}\n`;
+            const msg = `[${formatTimestamp()}] ${stringifyArgs.join(" ")}\n`;
+
             fs.appendFileSync(logPath, msg);
           } catch (err) {
             console.error("❌ Logger error:", err);

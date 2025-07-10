@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), viteLoggerPlugin()],
   server: {
     watch: {
-      ignored: ["**/frontend.*"], // ignore log or json files
+      ignored: ["src/console/**"], // ignore log or json files
     },
   },
 });
