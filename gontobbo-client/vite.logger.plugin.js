@@ -10,7 +10,7 @@ export default function viteLoggerPlugin() {
   return {
     name: "vite:log-to-file",
     configureServer(server) {
-      const logPath = path.resolve(__dirname, "frontend.json");
+      const logPath = path.resolve(__dirname, "src/console/frontend.json");
 
       fs.writeFileSync(logPath, ""); // optional: clear log on startup
 
