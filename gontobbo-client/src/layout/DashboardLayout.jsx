@@ -2,14 +2,7 @@ import { Link, Outlet } from "react-router";
 import BrandLogo from "../pages/shared/BrandLogo/BrandLogo";
 
 const DashboardLayout = () => {
-  const intro = {
-    title: "Welcome to Gontobbo",
-    description:
-      "Gontobbo is a platform that allows you to send parcels to other users in the network. You can also track the status of your parcels and receive updates on the delivery of your parcels.",
-    buttonText: "Get Started",
-    buttonLink: "/send-parcel",
-  };
-  console.log(intro, "DashboardLayout.jsx", 6);
+  intro.name();
 
   return (
     <div className="max-container">
