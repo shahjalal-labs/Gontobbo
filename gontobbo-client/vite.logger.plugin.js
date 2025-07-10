@@ -61,11 +61,12 @@ export default function viteLoggerPlugin() {
         });
       });
 
-      // Error endpoint (for error logs)
       server.middlewares.use("/__error", async (req, res) => {
         let body = "";
         req.on("data", (chunk) => (body += chunk));
         req.on("end", () => {
+          console.log("Received error log POST:", body); // <== Add this line for debug
+
           try {
             const { args } = JSON.parse(body);
             const stringifyArgs = args.map((arg) =>
