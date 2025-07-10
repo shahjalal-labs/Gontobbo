@@ -118,6 +118,7 @@
 │   ├── index.css
 │   ├── layout
 │   │   ├── AuthLayout.jsx
+│   │   ├── DashboardLayout.jsx
 │   │   └── RootLayout.jsx
 │   ├── main.jsx
 │   ├── pages
@@ -143,6 +144,7 @@
 │   │   │   │   └── Login.jsx
 │   │   │   └── Register
 │   │   │       └── Register.jsx
+│   │   ├── dashboard
 │   │   ├── gontobboZones
 │   │   │   ├── components
 │   │   │   │   ├── BangladeshMap.jsx
@@ -242,6 +244,6 @@
 ├── structure.md
 └── vite.config.js
 
-59 directories, 181 files
+60 directories, 182 files
 
 ```
