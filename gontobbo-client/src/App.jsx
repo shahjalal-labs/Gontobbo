@@ -5,6 +5,18 @@ import router from "./router/router";
 import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
+  const ami = [
+    {
+      name: "sj",
+      age: 25,
+    },
+    {
+      name: "shahjalal",
+      age: 25,
+    },
+  ];
+
+  console.log(`ami`, ami);
   return (
     <HelmetProvider>
       <AuthProvider>
