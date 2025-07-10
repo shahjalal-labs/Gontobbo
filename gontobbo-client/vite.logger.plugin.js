@@ -20,7 +20,14 @@ export default function viteLoggerPlugin() {
         req.on("end", () => {
           try {
             const { args } = JSON.parse(body);
-            const msg = `[${new Date().toISOString()}] ${args.join(" ")}\n`;
+            // const msg = `[${new Date().toISOString()}] ${args.join(" ")}\n`;
+            const stringifyArgs = args.map((arg) =>
+              typeof arg === "object"
+                ? JSON.stringify(arg, null, 2)
+                : String(arg),
+            );
+            const msg = `[${new Date().toISOString()}] ${stringifyArgs.join(" ")}\n`;
+
             fs.appendFileSync(logPath, msg);
           } catch (err) {
             console.error("❌ Logger error:", err);
