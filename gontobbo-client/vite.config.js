@@ -5,4 +5,9 @@ import viteLoggerPlugin from "./vite.logger.plugin.js";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), viteLoggerPlugin()],
+  server: {
+    watch: {
+      ignored: ["**/frontend.*"], // ignore log or json files
+    },
+  },
 });
