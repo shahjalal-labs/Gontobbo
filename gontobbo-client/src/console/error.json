@@ -1,0 +1,2 @@
+[2025-07-12T10:48:02.666Z] Unhandled Promise Rejection: {}
+[2025-07-12T10:57:57.360Z] TypeError: resolveDispatcher() is null http://localhost:5174/node_modules/.vite/deps/chunk-7EEON6PG.js?v=15309b43 927 16

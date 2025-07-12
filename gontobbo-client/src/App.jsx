@@ -3,28 +3,21 @@ import AuthProvider from "./contexts/AuthContext/AuthProvider";
 import router from "./router/router";
 
 import { HelmetProvider } from "react-helmet-async";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const App = () => {
-  const ami = [
-    {
-      name: "sj",
-      age: 25,
-    },
-    {
-      name: "shahjalal",
-      age: 25,
-    },
-  ];
+  const queryClient = new QueryClient();
 
-  console.log(`ami`, ami);
   return (
-    <HelmetProvider>
-      <AuthProvider>
-        <div className=" text-gray-500 font-roboto">
-          <RouterProvider router={router} />
-        </div>
-      </AuthProvider>
-    </HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <HelmetProvider>
+        <AuthProvider>
+          <div className=" text-gray-500 font-roboto">
+            <RouterProvider router={router} />
+          </div>
+        </AuthProvider>
+      </HelmetProvider>
+    </QueryClientProvider>
   );
 };
 

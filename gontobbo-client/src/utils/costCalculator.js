@@ -16,5 +16,9 @@ export const calculateCostWithBreakdown = (data) => {
   };
 };
 
-export const generateTrackingId = () =>
-  "TRK-" + Math.random().toString(36).substring(2, 10).toUpperCase();
+export const generateTrackingId = () => {
+  const prefix = "PCL";
+  const date = new Date().toISOString().slice(0, 10).replace(/-/g, ""); // YYYYMMDD
+  const random = Math.random().toString(36).substring(2, 7).toUpperCase(); // 5 characters
+  return `${prefix}-${date}-${random}`;
+};

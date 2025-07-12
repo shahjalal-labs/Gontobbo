@@ -10,7 +10,6 @@ const GeminiChatBox = ({
   className = "",
 }) => {
   const [prompt, setPrompt] = useState("");
-  console.log(prompt, "GeminiChatBox.jsx", 13);
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
 

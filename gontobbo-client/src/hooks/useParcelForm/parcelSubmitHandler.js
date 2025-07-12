@@ -5,10 +5,10 @@ import {
   generateTrackingId,
 } from "../../utils/costCalculator";
 import { renderParcelSummaryHtml } from "./renderParcelSummaryHtml";
-
+import { showSuccessAlert } from "../../utils/swal";
 const MySwal = withReactContent(Swal);
 
-export const handleParcelSubmit = async (data, reset) => {
+export const handleParcelSubmit = async (data, reset, user, axiosSecure) => {
   const cost = calculateCostWithBreakdown(data);
   const trackingId = generateTrackingId();
 
@@ -21,10 +21,27 @@ export const handleParcelSubmit = async (data, reset) => {
 
   if (confirm.isConfirmed) {
     reset();
-    console.log(
-      { ...data, trackingId, totalCost: cost.total },
-      "parcelSubmitHandler.js",
-      11,
-    );
+
+    const newParcel = {
+      ...data,
+      cost: cost.total,
+      created_by: user?.email,
+      payment_status: "unpaid",
+      delivery_status: "not_collected",
+      creation_date: new Date().toISOString(),
+      trackingId,
+    };
+    try {
+      const res = await axiosSecure.post("/parcels", newParcel);
+      console.log(res?.data, "parcelSubmitHandler.js", 35);
+      if (res?.data?.insertedId) {
+        showSuccessAlert({
+          title: "Redirecting...",
+          text: "Proceeding to payment gateway.",
+        });
+      }
+    } catch (error) {
+      console.log(`Error`, error);
+    }
   }
 };
