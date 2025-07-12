@@ -1,8 +1,9 @@
 import { Link, Outlet } from "react-router";
 import BrandLogo from "../pages/shared/BrandLogo/BrandLogo";
+
 import {
   HomeIcon,
-  ClipboardListIcon,
+  ClipboardDocumentListIcon,
   CreditCardIcon,
   TruckIcon,
   UserCircleIcon,
@@ -14,7 +15,7 @@ const DashboardLayout = () => {
     {
       path: "/dashboard/my-parcel",
       label: "My Parcels",
-      icon: ClipboardListIcon,
+      icon: ClipboardDocumentListIcon,
     },
     {
       path: "/dashboard/payment-history",

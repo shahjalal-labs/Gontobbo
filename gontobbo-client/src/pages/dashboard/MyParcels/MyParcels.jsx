@@ -1,8 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import { format } from "date-fns";
-import useAuth from "../../../hooks/useAuth";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import { showErrorAlert, showSuccessAlert } from "../../../utils/swal";
 import { useNavigate } from "react-router";
 
 const MyParcels = () => {
