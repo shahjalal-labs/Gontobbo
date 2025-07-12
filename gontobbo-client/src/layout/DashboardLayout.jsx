@@ -1,13 +1,36 @@
 import { Link, Outlet } from "react-router";
 import BrandLogo from "../pages/shared/BrandLogo/BrandLogo";
+import {
+  HomeIcon,
+  ClipboardListIcon,
+  CreditCardIcon,
+  TruckIcon,
+  UserCircleIcon,
+} from "@heroicons/react/24/outline";
 
 const DashboardLayout = () => {
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/dashboard/my-parcel", label: "My Parcels" },
-    { path: "/dashboard/payment-history", label: "Payment History" },
-    { path: "/dashboard/track-package", label: "Track a Package" },
-    { path: "/dashboard/update-profile", label: "Update Profile" },
+    { path: "/", label: "Home", icon: HomeIcon },
+    {
+      path: "/dashboard/my-parcel",
+      label: "My Parcels",
+      icon: ClipboardListIcon,
+    },
+    {
+      path: "/dashboard/payment-history",
+      label: "Payment History",
+      icon: CreditCardIcon,
+    },
+    {
+      path: "/dashboard/track-package",
+      label: "Track a Package",
+      icon: TruckIcon,
+    },
+    {
+      path: "/dashboard/update-profile",
+      label: "Update Profile",
+      icon: UserCircleIcon,
+    },
   ];
 
   return (
@@ -39,7 +62,7 @@ const DashboardLayout = () => {
               </svg>
             </label>
           </div>
-          <div className="flex-1 px-2">Dashboard</div>
+          <div className="flex-1 px-2 font-semibold text-lg">Dashboard</div>
         </div>
 
         {/* Page Content */}
@@ -53,9 +76,15 @@ const DashboardLayout = () => {
         <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content space-y-2">
           <BrandLogo />
-          {navLinks.map(({ path, label }) => (
+          {navLinks.map(({ path, label, icon: Icon }) => (
             <li key={path}>
-              <Link to={path}>{label}</Link>
+              <Link
+                to={path}
+                className="flex items-center gap-3 font-semibold text-gray-600 hover:text-indigo-600 transition"
+              >
+                <Icon className="h-5 w-5" />
+                {label}
+              </Link>
             </li>
           ))}
         </ul>
