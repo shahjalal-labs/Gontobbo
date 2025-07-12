@@ -2,6 +2,14 @@ import { Link, Outlet } from "react-router";
 import BrandLogo from "../pages/shared/BrandLogo/BrandLogo";
 
 const DashboardLayout = () => {
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/dashboard/my-parcel", label: "My Parcels" },
+    { path: "/dashboard/payment-history", label: "Payment History" },
+    { path: "/dashboard/track-package", label: "Track a Package" },
+    { path: "/dashboard/update-profile", label: "Update Profile" },
+  ];
+
   return (
     <div className="drawer lg:drawer-open min-h-screen max-container">
       {/* Drawer Toggle Checkbox */}
@@ -43,14 +51,13 @@ const DashboardLayout = () => {
       {/* Sidebar Content */}
       <div className="drawer-side">
         <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content space-y-2">
           <BrandLogo />
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/dashboard/my-parcel">My Parcels</Link>
-          </li>
+          {navLinks.map(({ path, label }) => (
+            <li key={path}>
+              <Link to={path}>{label}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
