@@ -142,19 +142,14 @@
 │   │   │   │   ├── SignUpPasswordInputs.jsx
 │   │   │   │   └── SocialLogin.jsx
 │   │   │   ├── index.js
-│   │   │   ├── MyParcels
-│   │   │   │   └── MyParcels.jsx
 │   │   │   ├── pages
 │   │   │   │   ├── ForgotPass.jsx
 │   │   │   │   ├── Signin.jsx
 │   │   │   │   └── SignUp.jsx
 │   │   │   └── refractorAuthPrompt.md
-│   │   ├── Authentication
-│   │   │   ├── Login
-│   │   │   │   └── Login.jsx
-│   │   │   └── Register
-│   │   │       └── Register.jsx
 │   │   ├── dashboard
+│   │   │   ├── MyParcels
+│   │   │   │   └── MyParcels.jsx
 │   │   │   ├── payment
 │   │   │   │   ├── 0-Card-Minimal.js
 │   │   │   │   ├── PaymentForm.jsx
@@ -260,6 +255,6 @@
 ├── vite.config.js
 └── vite.logger.plugin.js
 
-62 directories, 196 files
+59 directories, 194 files
 
 ```

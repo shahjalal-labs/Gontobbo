@@ -9,10 +9,10 @@ const SocialLogin = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
-
+  const from = location.state?.from?.pathname || "/";
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
-    const user = await googleSignIn();
+    await googleSignIn();
     Swal.fire({
       position: "center",
       icon: "success",
@@ -22,7 +22,9 @@ const SocialLogin = () => {
       timer: 2000,
     });
     setTimeout(() => {
-      navigate("/");
+      navigate(from, {
+        replace: true,
+      });
     }, 3000);
   };
   return (
