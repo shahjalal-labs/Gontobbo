@@ -3,10 +3,7 @@ import SocialLogin from "./SocialLogin";
 
 const SigninForm = () => {
   return (
-    <form
-      className="flex-1 bg-base-200 border-base-300 border rounded-box   w-fit   p-4
-      max-sm:max-w-[300px]      "
-    >
+    <form className="flex-1 bg-base-200 border-base-300 border rounded-box p-4">
       <h2 className="text-gray-500 text-2xl text-center font-bold">
         Sign In Now
       </h2>

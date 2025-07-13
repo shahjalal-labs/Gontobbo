@@ -21,15 +21,16 @@ const Signin = () => {
           control of your career.
         </p>
       </motion.div>
-      <div className="flex  flex-col-reverse lg:flex-row items-center justify-around *:flex-1 gap-7  mt-5">
+      <div className="lg:grid grid-cols-2 justify-center  max-2xl:gap-7  mt-5 *:mx-auto">
+        <motion.div className="max-w-[480px] max-lg:mb-5" {...rightToLeft}>
+          <SigninForm />
+        </motion.div>
+
         <motion.div
-          className="lg:max-w-[480px]  order bg-gray-50 shadow-lg rounded-lg hover:shadow-sm hover:scale-98"
+          className="max-w-[480px]  bg-gray-50 shadow-lg rounded-lg hover:shadow-sm hover:scale-98 "
           {...leftToRight}
         >
           <LottieAnimation anime={authLottie} />
-        </motion.div>
-        <motion.div className="max-w-[480px]" {...rightToLeft}>
-          <SigninForm />
         </motion.div>
       </div>
     </div>
