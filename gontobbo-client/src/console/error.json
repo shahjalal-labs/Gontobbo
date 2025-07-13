@@ -1,6 +1,0 @@
-[2025-07-13T03:26:20.391Z] ReferenceError: error is not defined http://localhost:5174/src/main.jsx?t=1752377178711 19 1
-[2025-07-13T03:26:30.449Z] ReferenceError: error is not defined http://localhost:5174/src/main.jsx?t=1752377179170 19 1
-[2025-07-13T06:21:34.486Z] Unhandled Promise Rejection: {}
-[2025-07-13T06:21:34.488Z] Unhandled Promise Rejection: {}
-[2025-07-13T06:21:34.489Z] Unhandled Promise Rejection: {}
-[2025-07-13T06:24:37.778Z] ResizeObserver loop completed with undelivered notifications. http://localhost:5174/auth/signin 0 0

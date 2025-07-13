@@ -23,7 +23,7 @@ const SignUp = () => {
       </div>
       <div className="flex  flex-col-reverse lg:flex-row items-center justify-around *:flex-1 gap-7  mt-5">
         <motion.div
-          className="lg:max-w-[480px]  order bg-gray-50 shadow-lg rounded-lg hover:shadow-sm hover:scale-98"
+          className="lg:max-w-[480px]  bg-gray-50 shadow-lg rounded-lg hover:shadow-sm hover:scale-98"
           {...leftToRight}
         >
           <LottieAnimation anime={authLottie} />
