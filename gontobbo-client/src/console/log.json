@@ -7,3 +7,95 @@
 [01:12 PM 13-07-25] bf8487df727b99f6e2512fdf957c2061 imgbb apikey
 [01:12 PM 13-07-25] bf8487df727b99f6e2512fdf957c2061 imgbb apikey
 [01:12 PM 13-07-25] bf8487df727b99f6e2512fdf957c2061 imgbb apikey
+[01:15 PM 13-07-25] null Navbar.jsx 9
+[01:15 PM 13-07-25] null Navbar.jsx 9
+[01:15 PM 13-07-25] null Navbar.jsx 9
+[01:15 PM 13-07-25] null Navbar.jsx 9
+[01:15 PM 13-07-25] {
+  "uid": "x9lqUoPBVPTzmV78yRttG4ixNFj1",
+  "email": "31l329gge@mozmail.com",
+  "emailVerified": false,
+  "isAnonymous": false,
+  "providerData": [
+    {
+      "providerId": "password",
+      "uid": "31l329gge@mozmail.com",
+      "displayName": null,
+      "email": "31l329gge@mozmail.com",
+      "phoneNumber": null,
+      "photoURL": null
+    }
+  ],
+  "stsTokenManager": {
+    "refreshToken": "AMf-vByvmpcXCjP6reQEh1BRU4sPYK-9ol9mfk0SBKe7E0RZGyaon7geGWuPwDHgiviipKN-7rnH1vjb9AzZ4n_szwl_fQkkIkAQskBMm68aLLdTLX9iKH2Pckk4zdZB0uqRo3XFHH3MgPdoWIiKY3fFVlSzPmC48gv1qfKTZcwyUaxP61xjNv3b8SXEBfk1a3EL5LawIlzekPhdOUgoSSzR7Bq_jpp1Eg",
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3YWU0OWM0YzlkM2ViODVhNTI1NDA3MmMzMGQyZThlNzY2MWVmZTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vd29ya2VsZXZhdGUtZTAwNGYiLCJhdWQiOiJ3b3JrZWxldmF0ZS1lMDA0ZiIsImF1dGhfdGltZSI6MTc1MjM5MDYzNSwidXNlcl9pZCI6Ing5bHFVb1BCVlBUem1WNzh5UnR0RzRpeE5GajEiLCJzdWIiOiJ4OWxxVW9QQlZQVHptVjc4eVJ0dEc0aXhORmoxIiwiaWF0IjoxNzUyMzkwNjM1LCJleHAiOjE3NTIzOTQyMzUsImVtYWlsIjoiMzFsMzI5Z2dlQG1vem1haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIjMxbDMyOWdnZUBtb3ptYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.bYN3AkwIBmtlv87PFHhjyo2kADxG8bYljTDu2itTdm_R-bxXtKCRlDz35FnaHMAxiX6CINOLrZkzMIEq_EBJSsu1fWb6-hYhOb1O6KH2CC8x6SoqYnHYvt79VYyVCp4JzySa1LtHgaKQ-R4LHN7Sw-C5Yw1ytTbcJCpiWgXWxAHwULLb1X0_XwuQvEBT9qhNTImWv-tZTRw3TmZ8N0ovaSDr5Y3BYzezSpdZnRSulKohXd7cdR_KgYbR7WBZVAfvppLnsUsaN4bfkmgdysGfv63se24Pa_kvjNxiKzOWczvSGusDl9VVfs7JwfkE9CZJ5-LvEj2AA2FGH81xBv_ygw",
+    "expirationTime": 1752394236102
+  },
+  "createdAt": "1752390635576",
+  "lastLoginAt": "1752390635576",
+  "apiKey": "AIzaSyBCe-hJggT0AuaoPNSSfWS3qOCFKeRq4iI",
+  "appName": "[DEFAULT]"
+} Navbar.jsx 9
+[01:15 PM 13-07-25] {
+  "uid": "x9lqUoPBVPTzmV78yRttG4ixNFj1",
+  "email": "31l329gge@mozmail.com",
+  "emailVerified": false,
+  "isAnonymous": false,
+  "providerData": [
+    {
+      "providerId": "password",
+      "uid": "31l329gge@mozmail.com",
+      "displayName": null,
+      "email": "31l329gge@mozmail.com",
+      "phoneNumber": null,
+      "photoURL": null
+    }
+  ],
+  "stsTokenManager": {
+    "refreshToken": "AMf-vByvmpcXCjP6reQEh1BRU4sPYK-9ol9mfk0SBKe7E0RZGyaon7geGWuPwDHgiviipKN-7rnH1vjb9AzZ4n_szwl_fQkkIkAQskBMm68aLLdTLX9iKH2Pckk4zdZB0uqRo3XFHH3MgPdoWIiKY3fFVlSzPmC48gv1qfKTZcwyUaxP61xjNv3b8SXEBfk1a3EL5LawIlzekPhdOUgoSSzR7Bq_jpp1Eg",
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3YWU0OWM0YzlkM2ViODVhNTI1NDA3MmMzMGQyZThlNzY2MWVmZTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vd29ya2VsZXZhdGUtZTAwNGYiLCJhdWQiOiJ3b3JrZWxldmF0ZS1lMDA0ZiIsImF1dGhfdGltZSI6MTc1MjM5MDYzNSwidXNlcl9pZCI6Ing5bHFVb1BCVlBUem1WNzh5UnR0RzRpeE5GajEiLCJzdWIiOiJ4OWxxVW9QQlZQVHptVjc4eVJ0dEc0aXhORmoxIiwiaWF0IjoxNzUyMzkwNjM1LCJleHAiOjE3NTIzOTQyMzUsImVtYWlsIjoiMzFsMzI5Z2dlQG1vem1haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIjMxbDMyOWdnZUBtb3ptYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.bYN3AkwIBmtlv87PFHhjyo2kADxG8bYljTDu2itTdm_R-bxXtKCRlDz35FnaHMAxiX6CINOLrZkzMIEq_EBJSsu1fWb6-hYhOb1O6KH2CC8x6SoqYnHYvt79VYyVCp4JzySa1LtHgaKQ-R4LHN7Sw-C5Yw1ytTbcJCpiWgXWxAHwULLb1X0_XwuQvEBT9qhNTImWv-tZTRw3TmZ8N0ovaSDr5Y3BYzezSpdZnRSulKohXd7cdR_KgYbR7WBZVAfvppLnsUsaN4bfkmgdysGfv63se24Pa_kvjNxiKzOWczvSGusDl9VVfs7JwfkE9CZJ5-LvEj2AA2FGH81xBv_ygw",
+    "expirationTime": 1752394236102
+  },
+  "createdAt": "1752390635576",
+  "lastLoginAt": "1752390635576",
+  "apiKey": "AIzaSyBCe-hJggT0AuaoPNSSfWS3qOCFKeRq4iI",
+  "appName": "[DEFAULT]"
+} Navbar.jsx 9
+[01:15 PM 13-07-25] null user.photoURL
+[01:15 PM 13-07-25] null user.photoURL
+[01:15 PM 13-07-25] null user.photoURL
+[01:15 PM 13-07-25] null user.photoURL
+[01:16 PM 13-07-25] null user.photoURL
+[01:16 PM 13-07-25] null user.photoURL
+[01:16 PM 13-07-25] null user.photoURL
+[01:16 PM 13-07-25] null user.photoURL
+[01:16 PM 13-07-25] null user.photoURL
+[01:16 PM 13-07-25] null user.photoURL
+[01:17 PM 13-07-25] null user.photoURL
+[01:17 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:19 PM 13-07-25] null user.photoURL
+[01:20 PM 13-07-25] [vite] server connection lost. Polling for restart...
+[01:20 PM 13-07-25] [vite] server connection lost. Polling for restart...
+[02:15 PM 13-07-25] null user.photoURL
+[02:15 PM 13-07-25] null user.photoURL
+[02:15 PM 13-07-25] null user.photoURL
+[02:15 PM 13-07-25] null user.photoURL
+[02:15 PM 13-07-25] null user.photoURL
+[02:15 PM 13-07-25] null user.photoURL
+[02:15 PM 13-07-25] null user.photoURL
+[02:15 PM 13-07-25] null user.photoURL

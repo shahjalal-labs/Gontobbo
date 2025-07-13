@@ -6,6 +6,7 @@ import Signout from "../../../pages/Auth/components/Signout";
 
 const Navbar = () => {
   const { user } = useAuth();
+  console.log(user?.photoURL, "user.photoURL");
   return (
     <>
       <div className="navbar  max-container">
