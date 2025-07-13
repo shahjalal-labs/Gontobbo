@@ -15,6 +15,9 @@ export const navItems = (
       <Link to="/dashboard/my-parcel">My Parcels</Link>
     </li>
     <li>
+      <Link to="/be-rider">Be a Rider</Link>
+    </li>
+    <li>
       <Link to="/chatbot">Ai Chatbot</Link>
     </li>
   </>

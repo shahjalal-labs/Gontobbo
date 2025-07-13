@@ -25,14 +25,6 @@ const dashboardRouter = {
       path: "payment-history",
       element: <PaymentHistory />,
     },
-    {
-      path: "rider",
-      element: (
-        <PrivateRoute>
-          <BeARider />
-        </PrivateRoute>
-      ),
-    },
   ],
 };
 

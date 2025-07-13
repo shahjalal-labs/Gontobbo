@@ -9,6 +9,7 @@ import GontobboZones from "../pages/gontobboZones_refactored/GontobboZones";
 import SendParcel from "../pages/SendParcel_refactored/SendParcel";
 import dashboardRouter from "./dashboardRouter"; // ✅ Imported
 import PrivateRoute from "./PrivateRoute";
+import BeARider from "../pages/dashboard/Rider/BeARider/BeARider";
 
 Aos.init();
 
@@ -30,6 +31,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <SendParcel />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "be-rider",
+        element: (
+          <PrivateRoute>
+            <BeARider />
           </PrivateRoute>
         ),
       },
