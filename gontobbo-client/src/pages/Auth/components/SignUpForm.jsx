@@ -6,6 +6,7 @@ import SignUpPasswordInputs from "./SignUpPasswordInputs";
 import SocialLogin from "./SocialLogin";
 import { isStrongPassword } from "../../../contexts/AuthContext/auth.helpers";
 
+console.log(import.meta.env.VITE_image_upload_key, "imgbb apikey");
 const SignUpForm = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -13,7 +14,7 @@ const SignUpForm = () => {
   const [error, setError] = useState("");
   const [uploading, setUploading] = useState(false);
 
-  const { registerUser, updateProfile } = useAuth();
+  const { registerUser, updateUserProfile } = useAuth();
 
   const handleImageUpload = async (file) => {
     const formData = new FormData();
@@ -57,7 +58,7 @@ const SignUpForm = () => {
 
       const res = await registerUser(email, password);
       if (res?.user) {
-        await updateProfile(res.user, {
+        await updateUserProfile(res.user, {
           displayName: name,
           photoURL,
         });
