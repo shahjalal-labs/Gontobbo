@@ -107,7 +107,9 @@
 │   ├── contexts
 │   │   └── AuthContext
 │   │       ├── AuthContext.jsx
-│   │       └── AuthProvider.jsx
+│   │       ├── auth.helpers.js
+│   │       ├── AuthProvider.jsx
+│   │       └── useFirebaseAuth.js
 │   ├── firebase
 │   │   └── firebase.init.js
 │   ├── hooks
@@ -154,8 +156,11 @@
 │   │   │   │   ├── 0-Card-Minimal.js
 │   │   │   │   ├── PaymentForm.jsx
 │   │   │   │   └── Payment.jsx
-│   │   │   └── PaymentHistory
-│   │   │       └── PaymentHistory.jsx
+│   │   │   ├── PaymentHistory
+│   │   │   │   └── PaymentHistory.jsx
+│   │   │   └── Rider
+│   │   │       └── BeARider
+│   │   │           └── BeARider.jsx
 │   │   ├── gontobboZones
 │   │   │   ├── components
 │   │   │   │   ├── BangladeshMap.jsx
@@ -256,6 +261,6 @@
 ├── vite.config.js
 └── vite.logger.plugin.js
 
-59 directories, 195 files
+61 directories, 198 files
 
 ```
