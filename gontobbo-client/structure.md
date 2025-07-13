@@ -246,6 +246,7 @@
 │   ├── router
 │   │   ├── authRouter.jsx
 │   │   ├── dashboardRouter.jsx
+│   │   ├── PrivateRoute.jsx
 │   │   └── router.jsx
 │   └── utils
 │       ├── costCalculator.js
@@ -255,6 +256,6 @@
 ├── vite.config.js
 └── vite.logger.plugin.js
 
-59 directories, 194 files
+59 directories, 195 files
 
 ```
