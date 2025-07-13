@@ -8,6 +8,7 @@ import GeminiChatBox from "../hooks/GeminiChatBox";
 import GontobboZones from "../pages/gontobboZones_refactored/GontobboZones";
 import SendParcel from "../pages/SendParcel_refactored/SendParcel";
 import dashboardRouter from "./dashboardRouter"; // ✅ Imported
+import PrivateRoute from "./PrivateRoute";
 
 Aos.init();
 
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "send-parcel",
-        element: <SendParcel />,
+        element: (
+          <PrivateRoute>
+            <SendParcel />
+          </PrivateRoute>
+        ),
       },
       {
         path: "chatbot",

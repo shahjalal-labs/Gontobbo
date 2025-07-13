@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 import useAuth from "../../../hooks/useAuth";
 
 const Signout = ({ children }) => {
-  const { signoutUser } = useAuth();
+  const { signoutUser, user } = useAuth();
 
   const handleSignout = async () => {
     await signoutUser();
@@ -16,8 +16,10 @@ const Signout = ({ children }) => {
     });
   };
   return (
-    <div onClick={handleSignout}>
-      {children || <button className="btn">Sign Out</button>}
+    <div onClick={handleSignout} title={user?.email}>
+      {children || (
+        <button className="btn btn-info btn-soft rounded-full">Sign Out</button>
+      )}
     </div>
   );
 };
