@@ -2,6 +2,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import MyParcels from "../pages/dashboard/MyParcels/MyParcels";
 import Payment from "../pages/dashboard/payment/Payment";
 import PaymentHistory from "../pages/dashboard/PaymentHistory/PaymentHistory";
+import PrivateRoute from "./PrivateRoute";
 
 const dashboardRouter = {
   path: "/dashboard",
@@ -9,7 +10,11 @@ const dashboardRouter = {
   children: [
     {
       path: "my-parcel",
-      element: <MyParcels />,
+      element: (
+        <PrivateRoute>
+          <MyParcels />,
+        </PrivateRoute>
+      ),
     },
     {
       path: "payment/:parcelId",

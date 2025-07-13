@@ -26,3 +26,7 @@
 .max-container {
   @apply max-w-7xl mx-auto;
 }
+
+.active {
+  @apply text-amber-500 border-amber-500 border-b-2 font-bold;
+}
