@@ -1,145 +1,227 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { motion } from "framer-motion";
 import { z } from "zod";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
+import {
+  Bike,
+  BadgePlus,
+  User,
+  Mail,
+  Phone,
+  Fingerprint,
+  Calendar,
+  MapPin,
+  Info,
+  Pencil,
+  FileText,
+} from "lucide-react";
 
-// 🧠 Zod Schema
-const riderSchema = z.object({
-  name: z.string().min(3, "Name is required"),
+const schema = z.object({
+  name: z.string().min(3, "Name must be at least 3 characters"),
   email: z.string().email("Invalid email"),
-  age: z.string().min(2).max(3),
-  phone: z.string().min(11, "Phone must be 11 digits"),
-  nid: z.string().min(10),
-  region: z.string().min(2),
-  district: z.string().min(2),
-  bike_brand: z.string().min(2),
-  bike_registration: z.string().min(5),
+  phone: z.string().min(11, "Phone must be at least 11 digits"),
+  nid: z.string().min(10, "NID must be at least 10 digits"),
+  age: z.string().min(2, "Age is required"),
+  district: z.string().min(2, "District is required"),
+  region: z.string().min(2, "Region is required"),
+  bike_brand: z.string().min(2, "Bike brand required"),
+  bike_registration: z.string().min(5, "Bike registration required"),
   note: z.string().optional(),
 });
 
-export default function BeARider() {
-  const [submitting, setSubmitting] = useState(false);
-  const navigate = useNavigate();
-
+const BeARider = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({
-    resolver: zodResolver(riderSchema),
+    resolver: zodResolver(schema),
+    mode: "onBlur",
   });
 
-  const onSubmit = async (data) => {
-    setSubmitting(true);
-    const payload = {
-      ...data,
-      status: "deactivated",
-      created_at: new Date().toISOString(),
-    };
+  const onSubmit = (data) => {
+    console.log("🚀 Rider Form Data:", data);
 
-    try {
-      // ⛳ Replace this with your secure Axios POST
-      console.log("Submit Payload:", payload);
+    Swal.fire({
+      icon: "success",
+      title: "Application Submitted 🚚",
+      text: "Thanks for joining! We'll get back to you soon.",
+      timer: 2500,
+      showConfirmButton: false,
+    });
 
-      // Simulated success
-      Swal.fire("Success!", "Application submitted!", "success");
-      reset();
-      navigate("/dashboard/myparcels");
-    } catch (err) {
-      Swal.fire("Error", err.message || "Submission failed", "error");
-    } finally {
-      setSubmitting(false);
-    }
+    reset();
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="p-6 bg-base-200 rounded-xl shadow-xl max-w-2xl mx-auto"
-    >
-      <h1 className="text-3xl font-bold text-center text-primary mb-6">
-        🚴‍♂️ Become a Rider with Gontobbo!
-      </h1>
-      <p className="text-center text-gray-500 mb-6">
-        Fill in the details below to join our fast-growing rider community and
-        start delivering across Bangladesh with speed and trust.
-      </p>
+    <div className="min-h-screen bg-base-100 px-4 py-10 flex flex-col items-center">
+      <motion.div
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 80 }}
+        className="max-w-xl w-full text-center mb-8"
+      >
+        <h1 className="text-4xl font-extrabold text-info flex items-center justify-center gap-2">
+          <Bike size={32} />
+          Become a Gontobbo Rider
+        </h1>
+        <p className="text-base-content mt-3 max-w-md mx-auto">
+          🚀 Help deliver parcels across Bangladesh and earn with every trip.
+          Fill out this quick form to apply as a rider.
+        </p>
+      </motion.div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="card w-full max-w-xl bg-base-200 p-6 space-y-4 shadow-2xl rounded-box"
+      >
+        {/** Name */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <User size={18} /> Full Name
+          </label>
           <input
             {...register("name")}
-            placeholder="Full Name"
             className="input input-bordered w-full"
           />
+          {errors.name && (
+            <p className="text-error mt-1">{errors.name.message}</p>
+          )}
+        </div>
+
+        {/** Email */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <Mail size={18} /> Email Address
+          </label>
           <input
+            type="email"
             {...register("email")}
-            placeholder="Email"
             className="input input-bordered w-full"
           />
-          <input
-            {...register("age")}
-            placeholder="Age"
-            className="input input-bordered w-full"
-          />
+          {errors.email && (
+            <p className="text-error mt-1">{errors.email.message}</p>
+          )}
+        </div>
+
+        {/** Phone */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <Phone size={18} /> Phone Number
+          </label>
           <input
             {...register("phone")}
-            placeholder="Phone Number"
             className="input input-bordered w-full"
           />
-          <input
-            {...register("nid")}
-            placeholder="NID Number"
-            className="input input-bordered w-full"
-          />
-          <input
-            {...register("region")}
-            placeholder="Region"
-            className="input input-bordered w-full"
-          />
+          {errors.phone && (
+            <p className="text-error mt-1">{errors.phone.message}</p>
+          )}
+        </div>
+
+        {/** NID */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <Fingerprint size={18} /> NID Number
+          </label>
+          <input {...register("nid")} className="input input-bordered w-full" />
+          {errors.nid && (
+            <p className="text-error mt-1">{errors.nid.message}</p>
+          )}
+        </div>
+
+        {/** Age */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <Calendar size={18} /> Age
+          </label>
+          <input {...register("age")} className="input input-bordered w-full" />
+          {errors.age && (
+            <p className="text-error mt-1">{errors.age.message}</p>
+          )}
+        </div>
+
+        {/** District */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <MapPin size={18} /> District
+          </label>
           <input
             {...register("district")}
-            placeholder="District"
             className="input input-bordered w-full"
           />
+          {errors.district && (
+            <p className="text-error mt-1">{errors.district.message}</p>
+          )}
+        </div>
+
+        {/** Region */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <MapPin size={18} /> Region
+          </label>
+          <input
+            {...register("region")}
+            className="input input-bordered w-full"
+          />
+          {errors.region && (
+            <p className="text-error mt-1">{errors.region.message}</p>
+          )}
+        </div>
+
+        {/** Bike Brand */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <BadgePlus size={18} /> Bike Brand
+          </label>
           <input
             {...register("bike_brand")}
-            placeholder="Bike Brand"
             className="input input-bordered w-full"
           />
+          {errors.bike_brand && (
+            <p className="text-error mt-1">{errors.bike_brand.message}</p>
+          )}
+        </div>
+
+        {/** Bike Reg */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <FileText size={18} /> Bike Registration
+          </label>
           <input
             {...register("bike_registration")}
-            placeholder="Bike Registration Number"
             className="input input-bordered w-full"
+          />
+          {errors.bike_registration && (
+            <p className="text-error mt-1">
+              {errors.bike_registration.message}
+            </p>
+          )}
+        </div>
+
+        {/** Note */}
+        <div>
+          <label className="label font-semibold flex items-center gap-1">
+            <Info size={18} /> Additional Note (Optional)
+          </label>
+          <textarea
+            {...register("note")}
+            className="textarea textarea-bordered w-full"
+            rows="3"
           />
         </div>
 
-        <textarea
-          {...register("note")}
-          placeholder="Additional info (optional)"
-          className="textarea textarea-bordered w-full"
-        />
-
-        {Object.entries(errors).map(([key, val]) => (
-          <p key={key} className="text-error text-sm font-medium">
-            {val.message}
-          </p>
-        ))}
-
+        {/** Submit Button */}
         <button
           type="submit"
-          disabled={submitting}
-          className="btn btn-primary btn-block rounded-full mt-4"
+          className="btn btn-info w-full mt-2 rounded-full text-white"
         >
-          {submitting ? "Submitting..." : "Submit Application"}
+          <Pencil size={18} className="mr-2" /> Submit Application
         </button>
       </form>
-    </motion.div>
+    </div>
   );
-}
+};
+
+export default BeARider;

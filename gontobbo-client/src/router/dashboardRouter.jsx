@@ -2,6 +2,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import MyParcels from "../pages/dashboard/MyParcels/MyParcels";
 import Payment from "../pages/dashboard/payment/Payment";
 import PaymentHistory from "../pages/dashboard/PaymentHistory/PaymentHistory";
+import BeARider from "../pages/dashboard/Rider/BeARider/BeARider";
 import PrivateRoute from "./PrivateRoute";
 
 const dashboardRouter = {
@@ -26,7 +27,11 @@ const dashboardRouter = {
     },
     {
       path: "rider",
-      element:  
+      element: (
+        <PrivateRoute>
+          <BeARider />
+        </PrivateRoute>
+      ),
     },
   ],
 };
