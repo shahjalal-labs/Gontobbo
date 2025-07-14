@@ -18,6 +18,7 @@ import {
 } from "react-icons/md";
 import { BsCalendar3 } from "react-icons/bs";
 import { FiCheckCircle } from "react-icons/fi";
+import useAuth from "../../../../hooks/useAuth";
 
 // Validation Schema
 const schema = z.object({
@@ -34,6 +35,7 @@ const schema = z.object({
 });
 
 const BeARider = () => {
+  const user = useAuth();
   const [selectedRegion, setSelectedRegion] = useState("");
 
   const {
@@ -102,15 +104,24 @@ const BeARider = () => {
           label="Name"
           icon={<AiOutlineUser />}
           error={errors.name}
-          inputProps={{ ...register("name"), placeholder: "Full name" }}
+          inputProps={{
+            ...register("name"),
+            placeholder: "Your full name",
+            defaultValue: user?.displayName || "",
+            readOnly: true, // 👈 makes it read-only
+          }}
         />
-
-        {/* Email */}
+        {/* email */}
         <Field
           label="Email"
           icon={<AiOutlineMail />}
           error={errors.email}
-          inputProps={{ ...register("email"), placeholder: "you@example.com" }}
+          inputProps={{
+            ...register("email"),
+            placeholder: "you@example.com",
+            defaultValue: user?.email || "",
+            readOnly: true, // 👈 makes it read-only
+          }}
         />
 
         {/* Phone */}
