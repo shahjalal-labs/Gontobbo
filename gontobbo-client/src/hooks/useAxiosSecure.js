@@ -11,10 +11,10 @@ const useAxiosSecure = () => {
   axiosSecure.interceptors.request.use(
     function (config) {
       config.headers.Authorization = `Bearer ${user.accessToken}`;
-      return config; // ✅ this was missing!
+      return config;
     },
     function (error) {
-      return Promise.reject(error); // ✅ best practice to handle errors
+      return Promise.reject(error);
     },
   );
 
