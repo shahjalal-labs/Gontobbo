@@ -35,7 +35,7 @@ const schema = z.object({
 });
 
 const BeARider = () => {
-  const user = useAuth();
+  const { user } = useAuth();
   const [selectedRegion, setSelectedRegion] = useState("");
 
   const {
@@ -58,7 +58,14 @@ const BeARider = () => {
     .map((z) => z.district);
 
   const onSubmit = (data) => {
-    console.log("✅ Rider Data Submitted:", data);
+    const newRider = {
+      ...data,
+      name: user?.displayName || "",
+      email: user?.email || "",
+      status: "pending",
+      created_at: new Date().toISOString(),
+    };
+    console.log(newRider, "BeARider.jsx", 62);
   };
 
   useEffect(() => {
