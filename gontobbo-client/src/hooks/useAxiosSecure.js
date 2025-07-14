@@ -7,9 +7,17 @@ const axiosSecure = axios.create({
 
 const useAxiosSecure = () => {
   const { user } = useAuth();
-  axiosSecure.interceptors.request.use(function (config) {
-    config.headers.Authorization = `Bearer ${user.accessToken}`;
-  });
+
+  axiosSecure.interceptors.request.use(
+    function (config) {
+      config.headers.Authorization = `Bearer ${user.accessToken}`;
+      return config; // ✅ this was missing!
+    },
+    function (error) {
+      return Promise.reject(error); // ✅ best practice to handle errors
+    },
+  );
+
   return axiosSecure;
 };
 

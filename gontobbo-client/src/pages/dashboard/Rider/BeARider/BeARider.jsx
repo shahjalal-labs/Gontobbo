@@ -19,6 +19,8 @@ import {
 import { BsCalendar3 } from "react-icons/bs";
 import { FiCheckCircle } from "react-icons/fi";
 import useAuth from "../../../../hooks/useAuth";
+import Swal from "sweetalert2";
+import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 
 // Validation Schema
 const schema = z.object({
@@ -35,6 +37,8 @@ const schema = z.object({
 });
 
 const BeARider = () => {
+  const axiosSecure = useAxiosSecure();
+
   const { user } = useAuth();
   const [selectedRegion, setSelectedRegion] = useState("");
 
@@ -58,14 +62,26 @@ const BeARider = () => {
     .map((z) => z.district);
 
   const onSubmit = (data) => {
-    const newRider = {
+    const riderData = {
       ...data,
       name: user?.displayName || "",
       email: user?.email || "",
       status: "pending",
       created_at: new Date().toISOString(),
     };
-    console.log(newRider, "BeARider.jsx", 62);
+
+    axiosSecure.post("/riders", riderData).then((res) => {
+      if (res.data.insertedId) {
+        Swal.fire({
+          icon: "success",
+          title: "Application Submitted!",
+          text: "Your application is pending approval.",
+        });
+      }
+    });
+
+    // Send to your backend here
+    reset();
   };
 
   useEffect(() => {
