@@ -28,20 +28,16 @@ const DashboardLayout = () => {
       icon: TruckIcon,
     },
     {
-      path: "/dashboard/track-package",
-      label: "Track a Package",
+      path: "/dashboard/active-rider",
+      label: "Active Riders",
       icon: TruckIcon,
     },
     {
-      path: "/dashboard/track-package",
-      label: "Track a Package",
+      path: "/dashboard/pending-rider",
+      label: "Pending Riders",
       icon: TruckIcon,
     },
-    {
-      path: "/dashboard/track-package",
-      label: "Track a Package",
-      icon: TruckIcon,
-    }
+
     {
       path: "/dashboard/update-profile",
       label: "Update Profile",

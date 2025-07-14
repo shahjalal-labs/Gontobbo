@@ -1,1 +1,2 @@
 [2025-07-14T07:18:30.846Z] Unhandled Promise Rejection: {}
+[2025-07-14T10:36:42.114Z] Uncaught TypeError: Cannot read properties of null (reading 'useState') http://localhost:5174/node_modules/.vite/deps/chunk-7EEON6PG.js?v=abeefeb7 927 35
