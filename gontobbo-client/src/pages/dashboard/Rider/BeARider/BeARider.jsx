@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
+import { gontobboZones } from "../../../gontobboZones/gontobbo.constants"; // ✅ Your region/district data
+
 import {
   AiOutlineUser,
   AiOutlineMail,
@@ -17,33 +19,44 @@ import {
 import { BsCalendar3 } from "react-icons/bs";
 import { FiCheckCircle } from "react-icons/fi";
 
-// Validation schema
+// Validation Schema
 const schema = z.object({
   name: z.string().min(3, "Name must be at least 3 characters"),
   email: z.string().email("Invalid email address"),
   phone: z.string().min(10, "Enter a valid phone number"),
   nid: z.string().min(10, "NID must be valid"),
   age: z.number().int().min(18, "Must be at least 18").max(100, "Age too high"),
-  district: z.string().min(2, "District required"),
-  region: z.string().min(2, "Region required"),
+  region: z.string().min(1, "Region is required"),
+  district: z.string().min(1, "District is required"),
   bike_brand: z.string().min(2, "Bike brand required"),
-  bike_registration: z.string().min(5, "Bike registration required"),
+  bike_registration: z.string().min(5, "Registration required"),
   note: z.string().optional(),
 });
 
 const BeARider = () => {
+  const [selectedRegion, setSelectedRegion] = useState("");
+
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
     reset,
+    watch,
+    setValue,
   } = useForm({
     resolver: zodResolver(schema),
     mode: "onBlur",
   });
 
+  const region = watch("region");
+
+  const regions = Array.from(new Set(gontobboZones.map((z) => z.region)));
+  const districts = gontobboZones
+    .filter((z) => z.region === region)
+    .map((z) => z.district);
+
   const onSubmit = (data) => {
-    console.log("Rider Data Submitted:", data);
+    console.log("✅ Rider Data Submitted:", data);
   };
 
   useEffect(() => {
@@ -55,13 +68,14 @@ const BeARider = () => {
           email: "shahjalal@example.com",
           phone: "01540325659",
           nid: "01989763775",
-          age: 18,
-          district: "Netrokona",
+          age: 23,
           region: "Mymensingh",
+          district: "Netrokona",
           bike_brand: "Yamaha",
-          bike_registration: "0154032565901989763775",
+          bike_registration: "REG-123456",
           note: "Experienced rider, ready to deliver with care!",
         });
+        setSelectedRegion("Mymensingh");
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -70,147 +84,174 @@ const BeARider = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="max-w-7xl mx-auto p-6 bg-white rounded-xl shadow-md border border-gray-200 my-10"
+      className="max-w-7xl mx-auto p-6 bg-white rounded-xl shadow-md"
     >
-      <h1 className="text-4xl font-bold text-center text-indigo-600 mb-6">
+      <h2 className="text-3xl font-bold text-indigo-600 text-center mb-4">
         🏍️ Become a Rider — Join Our Team!
-      </h1>
-      <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-        Ready to hit the road? Fill out the form below to become a delivery
-        rider. We prioritize safety, professionalism, and care — and we’d love
-        to have you with us!
-      </p>
+      </h2>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        className="grid grid-cols-1 gap-6"
       >
-        {/* Field Generator */}
-        {[
-          {
-            label: "Name",
-            icon: <AiOutlineUser />,
-            name: "name",
-            type: "text",
-            placeholder: "Your full name",
-          },
-          {
-            label: "Email",
-            icon: <AiOutlineMail />,
-            name: "email",
-            type: "email",
-            placeholder: "you@example.com",
-          },
-          {
-            label: "Phone",
-            icon: <AiOutlinePhone />,
-            name: "phone",
-            type: "tel",
-            placeholder: "01XXXXXXXXX",
-          },
-          {
-            label: "NID Number",
-            icon: <AiOutlineIdcard />,
-            name: "nid",
-            type: "text",
-            placeholder: "Your National ID",
-          },
-          {
-            label: "Age",
-            icon: <BsCalendar3 />,
-            name: "age",
+        {/* Name */}
+        <Field
+          label="Name"
+          icon={<AiOutlineUser />}
+          error={errors.name}
+          inputProps={{ ...register("name"), placeholder: "Full name" }}
+        />
+
+        {/* Email */}
+        <Field
+          label="Email"
+          icon={<AiOutlineMail />}
+          error={errors.email}
+          inputProps={{ ...register("email"), placeholder: "you@example.com" }}
+        />
+
+        {/* Phone */}
+        <Field
+          label="Phone"
+          icon={<AiOutlinePhone />}
+          error={errors.phone}
+          inputProps={{ ...register("phone"), placeholder: "01XXXXXXXXX" }}
+        />
+
+        {/* NID */}
+        <Field
+          label="NID Number"
+          icon={<AiOutlineIdcard />}
+          error={errors.nid}
+          inputProps={{ ...register("nid"), placeholder: "Your NID number" }}
+        />
+
+        {/* Age */}
+        <Field
+          label="Age"
+          icon={<BsCalendar3 />}
+          error={errors.age}
+          inputProps={{
+            ...register("age", { valueAsNumber: true }),
             type: "number",
             placeholder: "Your age",
-            config: { valueAsNumber: true },
-          },
-          {
-            label: "District",
-            icon: <MdOutlineLocationCity />,
-            name: "district",
-            type: "text",
-            placeholder: "Your district",
-          },
-          {
-            label: "Region",
-            icon: <MdOutlineLocationCity />,
-            name: "region",
-            type: "text",
-            placeholder: "Your region",
-          },
-          {
-            label: "Bike Brand",
-            icon: <MdDirectionsBike />,
-            name: "bike_brand",
-            type: "text",
-            placeholder: "e.g. Yamaha",
-          },
-          {
-            label: "Bike Registration",
-            icon: <MdDirectionsBike />,
-            name: "bike_registration",
-            type: "text",
-            placeholder: "Bike registration number",
-          },
-        ].map(({ label, icon, name, type, placeholder, config }) => (
-          <div key={name} className="flex flex-col">
-            <label className="flex items-center gap-2 font-semibold text-gray-700">
-              <span className="text-indigo-500">{icon}</span> {label}
-            </label>
-            <input
-              type={type}
-              placeholder={placeholder}
-              className={`input input-bordered mt-1 ${
-                errors[name] ? "input-error" : "input-info"
-              }`}
-              {...register(name, config)}
-            />
-            {errors[name] && (
-              <span className="text-error text-sm mt-1">
-                {errors[name]?.message}
-              </span>
-            )}
-          </div>
-        ))}
+          }}
+        />
 
-        {/* Note Field */}
-        <div className="md:col-span-2">
-          <label className="flex items-center gap-2 font-semibold text-gray-700">
-            <MdNotes className="text-indigo-500" /> Additional Note
+        {/* Region */}
+        <div>
+          <label className="font-semibold flex items-center gap-2 text-gray-700">
+            <MdOutlineLocationCity className="text-indigo-500" />
+            Region
+          </label>
+          <select
+            className={`select select-bordered w-full mt-1 ${
+              errors.region ? "select-error" : "select-info"
+            }`}
+            {...register("region")}
+            onChange={(e) => {
+              setSelectedRegion(e.target.value);
+              setValue("region", e.target.value);
+              setValue("district", ""); // reset district
+            }}
+          >
+            <option value="">Select a region</option>
+            {regions.map((r) => (
+              <option key={r} value={r}>
+                {r}
+              </option>
+            ))}
+          </select>
+          {errors.region && (
+            <p className="text-error text-sm mt-1">{errors.region.message}</p>
+          )}
+        </div>
+
+        {/* District */}
+        <div>
+          <label className="font-semibold flex items-center gap-2 text-gray-700">
+            <MdOutlineLocationCity className="text-indigo-500" />
+            District
+          </label>
+          <select
+            className={`select select-bordered w-full mt-1 ${
+              errors.district ? "select-error" : "select-info"
+            }`}
+            {...register("district")}
+            disabled={!region}
+          >
+            <option value="">
+              {region ? "Select district" : "Select region first"}
+            </option>
+            {districts.map((d) => (
+              <option key={d} value={d}>
+                {d}
+              </option>
+            ))}
+          </select>
+          {errors.district && (
+            <p className="text-error text-sm mt-1">{errors.district.message}</p>
+          )}
+        </div>
+
+        {/* Bike Brand */}
+        <Field
+          label="Bike Brand"
+          icon={<MdDirectionsBike />}
+          error={errors.bike_brand}
+          inputProps={{
+            ...register("bike_brand"),
+            placeholder: "Yamaha / Bajaj",
+          }}
+        />
+
+        {/* Bike Registration */}
+        <Field
+          label="Bike Registration"
+          icon={<MdDirectionsBike />}
+          error={errors.bike_registration}
+          inputProps={{
+            ...register("bike_registration"),
+            placeholder: "REG-XXXXXX",
+          }}
+        />
+
+        {/* Note */}
+        <div>
+          <label className="font-semibold flex items-center gap-2 text-gray-700">
+            <MdNotes className="text-indigo-500" />
+            Additional Note
           </label>
           <textarea
-            rows={3}
-            placeholder="Extra info if any..."
-            className="textarea textarea-bordered w-full mt-1"
             {...register("note")}
+            rows={3}
+            placeholder="Optional note..."
+            className="textarea textarea-bordered textarea-info w-full mt-1"
           />
         </div>
 
-        {/* Submit Button */}
-        <div className="md:col-span-2">
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="btn btn-primary w-full rounded-full mt-4"
-          >
-            {isSubmitting ? (
-              <span className="loading loading-spinner text-white"></span>
-            ) : (
-              <>
-                Submit <FiCheckCircle className="ml-2 text-lg" />
-              </>
-            )}
-          </button>
-        </div>
+        {/* Submit */}
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="btn btn-primary w-full flex items-center justify-center gap-2"
+        >
+          {isSubmitting ? (
+            <span className="loading loading-spinner"></span>
+          ) : (
+            <>
+              Submit <FiCheckCircle />
+            </>
+          )}
+        </button>
 
         {isSubmitSuccessful && (
-          <div className="md:col-span-2 text-center mt-4">
-            <p className="text-green-600 font-semibold">
-              ✅ Thank you for registering! We'll be in touch soon.
-            </p>
-          </div>
+          <p className="text-green-600 text-center font-semibold">
+            ✅ Thank you for registering! We’ll contact you soon.
+          </p>
         )}
       </form>
 
@@ -221,5 +262,20 @@ const BeARider = () => {
     </motion.div>
   );
 };
+
+const Field = ({ label, icon, error, inputProps }) => (
+  <div>
+    <label className="font-semibold flex items-center gap-2 text-gray-700">
+      <span className="text-indigo-500">{icon}</span> {label}
+    </label>
+    <input
+      className={`input input-bordered w-full mt-1 ${
+        error ? "input-error" : "input-info"
+      }`}
+      {...inputProps}
+    />
+    {error && <p className="text-error text-sm mt-1">{error.message}</p>}
+  </div>
+);
 
 export default BeARider;

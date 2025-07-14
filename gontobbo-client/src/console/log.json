@@ -66,3 +66,29 @@
 [08:55 AM 14-07-25] null user.photoURL
 [08:55 AM 14-07-25] null user.photoURL
 [08:55 AM 14-07-25] null user.photoURL
+[08:58 AM 14-07-25] null user.photoURL
+[08:58 AM 14-07-25] null user.photoURL
+[08:58 AM 14-07-25] ✅ Rider Data Submitted: {
+  "name": "Md. Shahjalal",
+  "email": "shahjalal@example.com",
+  "phone": "01540325659",
+  "nid": "01989763775",
+  "age": 23,
+  "region": "Mymensingh",
+  "district": "Netrokona",
+  "bike_brand": "Yamaha",
+  "bike_registration": "REG-123456",
+  "note": "Experienced rider, ready to deliver with care!"
+}
+[08:59 AM 14-07-25] ✅ Rider Data Submitted: {
+  "name": "Md. Shahjalal",
+  "email": "shahjalal@example.com",
+  "phone": "01540325659",
+  "nid": "01989763775",
+  "age": 23,
+  "region": "Mymensingh",
+  "district": "Netrokona",
+  "bike_brand": "Yamaha",
+  "bike_registration": "REG-123456",
+  "note": "Experienced rider, ready to deliver with care!"
+}
