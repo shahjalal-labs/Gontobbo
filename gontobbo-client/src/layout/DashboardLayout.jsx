@@ -28,6 +28,21 @@ const DashboardLayout = () => {
       icon: TruckIcon,
     },
     {
+      path: "/dashboard/track-package",
+      label: "Track a Package",
+      icon: TruckIcon,
+    },
+    {
+      path: "/dashboard/track-package",
+      label: "Track a Package",
+      icon: TruckIcon,
+    },
+    {
+      path: "/dashboard/track-package",
+      label: "Track a Package",
+      icon: TruckIcon,
+    }
+    {
       path: "/dashboard/update-profile",
       label: "Update Profile",
       icon: UserCircleIcon,

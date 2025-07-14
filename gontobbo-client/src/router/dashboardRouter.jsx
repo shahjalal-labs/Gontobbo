@@ -2,6 +2,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import MyParcels from "../pages/dashboard/MyParcels/MyParcels";
 import Payment from "../pages/dashboard/payment/Payment";
 import PaymentHistory from "../pages/dashboard/PaymentHistory/PaymentHistory";
+import ActiveRiders from "../pages/dashboard/Rider/ActiveRider/ActiveRiders";
 import PendingRiders from "../pages/dashboard/Rider/PendingRiders/PendingRiders";
 import PrivateRoute from "./PrivateRoute";
 
@@ -31,6 +32,14 @@ const dashboardRouter = {
       element: (
         <PrivateRoute>
           <PendingRiders />
+        </PrivateRoute>
+      ),
+    },
+    {
+      path: "active-rider",
+      element: (
+        <PrivateRoute>
+          <ActiveRiders />
         </PrivateRoute>
       ),
     },
