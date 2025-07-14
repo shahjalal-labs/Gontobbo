@@ -112,7 +112,6 @@ const BeARider = () => {
           icon={<AiOutlineUser />}
           error={errors.name}
           inputProps={{
-            ...register("name"),
             placeholder: "Your full name",
             defaultValue: user?.displayName || "",
             readOnly: true, // 👈 makes it read-only
@@ -124,7 +123,6 @@ const BeARider = () => {
           icon={<AiOutlineMail />}
           error={errors.email}
           inputProps={{
-            ...register("email"),
             placeholder: "you@example.com",
             defaultValue: user?.email || "",
             readOnly: true, // 👈 makes it read-only
