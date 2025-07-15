@@ -4,9 +4,11 @@ import { FaMoneyBill, FaHashtag, FaClock } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import Spinner from "../../shared/Spinner";
 import Error from "../../shared/Error";
+import useAuth from "../../../hooks/useAuth";
 
 const PaymentHistory = () => {
   const axiosSecure = useAxiosSecure();
+  const { user } = useAuth();
 
   const {
     data: payments = [],
@@ -17,7 +19,7 @@ const PaymentHistory = () => {
   } = useQuery({
     queryKey: ["paymentHistory"],
     queryFn: async () => {
-      const res = await axiosSecure.get("/payments");
+      const res = await axiosSecure.get(`/payments?email=${user?.email}`);
       return res.data;
     },
   });
