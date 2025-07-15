@@ -1,14 +1,14 @@
 import axios from "axios";
 import useAuth from "./useAuth";
 
-const axiosSecure = axios.create({
+export const axiosInstance = axios.create({
   baseURL: `http://localhost:5000`,
 });
 
 const useAxiosSecure = () => {
   const { user } = useAuth();
 
-  axiosSecure.interceptors.request.use(
+  axiosInstance.interceptors.request.use(
     function (config) {
       config.headers.Authorization = `Bearer ${user.accessToken}`;
       return config;
@@ -18,7 +18,7 @@ const useAxiosSecure = () => {
     },
   );
 
-  return axiosSecure;
+  return axiosInstance;
 };
 
 export default useAxiosSecure;

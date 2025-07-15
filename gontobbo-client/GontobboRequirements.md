@@ -342,6 +342,7 @@
 
 1. Show Parcels where delivery rider is user and status "ready-for-delivery" in a table format with address, receiver contact and info, and date
 2. Add a button **Confirm Delivery**. On Clicking It, show Modal with Confirm Tracking_no Input and Confirm button. On writing correct tracking_no do some action
+
 3. Parcel status will be changed to "delivered". A new tracking doc will be stored in tracking with a status message
 4. Rider Earning will be increased by 20.
 

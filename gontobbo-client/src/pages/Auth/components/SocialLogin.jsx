@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import useAuth from "../../../hooks/useAuth";
 import { Facebook, Github } from "lucide-react";
+import { axiosInstance } from "../../../hooks/useAxiosSecure";
 
 const SocialLogin = () => {
   const { googleSignIn } = useAuth();
@@ -12,20 +13,26 @@ const SocialLogin = () => {
   const from = location.state?.from?.pathname || "/";
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
-    await googleSignIn();
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: "Sign in Success!",
-      text: "You have successfully signed in",
-      showConfirmButton: false,
-      timer: 2000,
-    });
-    setTimeout(() => {
-      navigate(from, {
-        replace: true,
+    try {
+      await googleSignIn();
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Sign in Success!",
+        text: "You have successfully signed in",
+        showConfirmButton: false,
+        timer: 2000,
       });
-    }, 3000);
+
+      axiosInstance.post("/users");
+      setTimeout(() => {
+        navigate(from, {
+          replace: true,
+        });
+      }, 3000);
+    } catch (error) {
+      console.log(`Google Sign In Failed!`, error);
+    }
   };
   return (
     <div>
