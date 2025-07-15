@@ -2,11 +2,15 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { FaEye, FaCheck, FaTimes } from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure, { axiosInstance } from "../../../../hooks/useAxiosSecure";
+import useAxiosSecure, {
+  axiosInstance,
+} from "../../../../hooks/useAxiosSecure";
+import useAuth from "../../../../hooks/useAuth";
 
 const PendingRiders = () => {
   const [selectedRider, setSelectedRider] = useState(null);
   const axiosSecure = useAxiosSecure();
+  const { user } = useAuth();
 
   const {
     isPending,
@@ -38,6 +42,7 @@ const PendingRiders = () => {
     try {
       await axiosSecure.patch(`/riders/${id}/status`, {
         status: action === "approve" ? "active" : "rejected",
+        email: user?.email,
       });
 
       refetch();

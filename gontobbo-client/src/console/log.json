@@ -49,3 +49,106 @@
 }
 [02:29 PM 15-07-25] https://lh3.googleusercontent.com/a/ACg8ocKqSiPMbIhsHkK6FzUQUUGYe9e8a6Nlhbhh_5SQIbcHU30KuVqG=s96-c user.photoURL
 [02:29 PM 15-07-25] https://lh3.googleusercontent.com/a/ACg8ocKqSiPMbIhsHkK6FzUQUUGYe9e8a6Nlhbhh_5SQIbcHU30KuVqG=s96-c user.photoURL
+[02:35 PM 15-07-25] bf8487df727b99f6e2512fdf957c2061 imgbb apikey
+[02:35 PM 15-07-25] bf8487df727b99f6e2512fdf957c2061 imgbb apikey
+[03:25 PM 15-07-25] https://lh3.googleusercontent.com/a/ACg8ocKqSiPMbIhsHkK6FzUQUUGYe9e8a6Nlhbhh_5SQIbcHU30KuVqG=s96-c user.photoURL
+[03:25 PM 15-07-25] https://lh3.googleusercontent.com/a/ACg8ocKqSiPMbIhsHkK6FzUQUUGYe9e8a6Nlhbhh_5SQIbcHU30KuVqG=s96-c user.photoURL
+[04:25 PM 15-07-25] https://lh3.googleusercontent.com/a/ACg8ocKqSiPMbIhsHkK6FzUQUUGYe9e8a6Nlhbhh_5SQIbcHU30KuVqG=s96-c user.photoURL
+[04:25 PM 15-07-25] https://lh3.googleusercontent.com/a/ACg8ocKqSiPMbIhsHkK6FzUQUUGYe9e8a6Nlhbhh_5SQIbcHU30KuVqG=s96-c user.photoURL
+[04:27 PM 15-07-25] {} PaymentHistory.jsx 25
+[04:27 PM 15-07-25] {} PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] {} PaymentHistory.jsx 25
+[04:27 PM 15-07-25] {} PaymentHistory.jsx 25
+[04:27 PM 15-07-25] bf8487df727b99f6e2512fdf957c2061 imgbb apikey
+[04:27 PM 15-07-25] {} PaymentHistory.jsx 25
+[04:27 PM 15-07-25] {} PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:27 PM 15-07-25] null PaymentHistory.jsx 25
+[04:28 PM 15-07-25] {
+  "message": "Request failed with status code 403",
+  "name": "AxiosError",
+  "stack": "settle@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:1232:12\nonloadend@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:1564:13\nEventHandlerNonNull*dispatchXhrRequest@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:1574:7\nxhr_default<@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:1531:10\ndispatchRequest@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:2006:10\npromise callback*_request@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:2209:27\nrequest@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:2118:25\nforEachMethodNoData/Axios.prototype[method]@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:2246:17\nwrap@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:8:15\nqueryFn@http://localhost:5173/src/pages/dashboard/PaymentHistory/PaymentHistory.jsx?t=1752575277829:36:37\nfetchFn@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:881:14\nrun@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:513:49\ncreateRetryer/run/</<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:538:11\npromise callback*createRetryer/run/<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:534:10\npromise callback*run@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:517:51\ncreateRetryer/run/</<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:538:11\npromise callback*createRetryer/run/<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:534:10\npromise callback*run@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:517:51\ncreateRetryer/run/</<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:538:11\npromise callback*createRetryer/run/<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:534:10\npromise callback*run@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:517:51\nstart@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:555:9\nfetch@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:969:41\nexecuteFetch_fn@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:2279:51\nonSubscribe@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:1983:74\nsubscribe@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:24:10\nuseBaseQuery/<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:3146:56\nsubscribeToStore@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:4638:16\nreact-stack-bottom-frame@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:17478:20\nrunWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:1487:15\ncommitHookEffectListMount@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:8460:122\ncommitHookPassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:8518:60\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9887:29\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9881:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9881:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9881:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\n",
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "adapter": [
+      "xhr",
+      "http",
+      "fetch"
+    ],
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": {},
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE4ZGY2MmQzYTBhNDRlM2RmY2RjYWZjNmRhMTM4Mzc3NDU5ZjliMDEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTGVhcm5pbmcgRW5nbGlzaCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLcVNpUE1iSWhzSGtLNkZ6VVFVVUdZZTllOGE2TmxoYmhoXzVTUUliY0hVMzBLdVZxRz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS93b3JrZWxldmF0ZS1lMDA0ZiIsImF1ZCI6IndvcmtlbGV2YXRlLWUwMDRmIiwiYXV0aF90aW1lIjoxNzUyNTY4MTc4LCJ1c2VyX2lkIjoiWlhjZFVKWTBkQlFCd2dhTDFXTk1CZ3l4VHU5MiIsInN1YiI6IlpYY2RVSlkwZEJRQndnYUwxV05NQmd5eFR1OTIiLCJpYXQiOjE3NTI1NzUxMTcsImV4cCI6MTc1MjU3ODcxNywiZW1haWwiOiJtZHNoYWhqYWxhbDUxMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjEwMDk1NDUzMTAyMTU1NTQ4NTQzNyJdLCJlbWFpbCI6WyJtZHNoYWhqYWxhbDUxMkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.vJhd_xyca1pRSNZoSLBQKzZn9CkLkt2svvqK9oZwBpBHlDcul1Kqg89QOMhOtk81qVe4Sm2h314D_2L81w4SARfj0x3ikQi1qIES3W14wElBMIYQ4Ht6PPBTy4Q1PEwtNWS0XjORSbNwwJ0dWZczWrFgTHdV5h3XgmYVEM8cmDQBSiTLwEWuwDyyuly4AmHnhG7lJVos4RzYv-Izfs9lgxr3SIuzDF6lkq6ajRPRZk48p5mM6IGeoqeZi01gRGODXo_gW4Hr0otTe9WrwiSRMkm0UQVwb7-klP4n57yT01QiuRGiOZsA-nNQgY5Whd31nCF7SGPIhgS5oRsvoThvRg"
+    },
+    "baseURL": "http://localhost:8000",
+    "method": "get",
+    "url": "/payments",
+    "allowAbsoluteUrls": true
+  },
+  "code": "ERR_BAD_REQUEST",
+  "status": 403
+} PaymentHistory.jsx 25
+[04:28 PM 15-07-25] {
+  "message": "Request failed with status code 403",
+  "name": "AxiosError",
+  "stack": "settle@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:1232:12\nonloadend@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:1564:13\nEventHandlerNonNull*dispatchXhrRequest@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:1574:7\nxhr_default<@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:1531:10\ndispatchRequest@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:2006:10\npromise callback*_request@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:2209:27\nrequest@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:2118:25\nforEachMethodNoData/Axios.prototype[method]@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:2246:17\nwrap@http://localhost:5173/node_modules/.vite/deps/axios.js?v=35a3c4eb:8:15\nqueryFn@http://localhost:5173/src/pages/dashboard/PaymentHistory/PaymentHistory.jsx?t=1752575277829:36:37\nfetchFn@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:881:14\nrun@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:513:49\ncreateRetryer/run/</<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:538:11\npromise callback*createRetryer/run/<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:534:10\npromise callback*run@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:517:51\ncreateRetryer/run/</<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:538:11\npromise callback*createRetryer/run/<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:534:10\npromise callback*run@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:517:51\ncreateRetryer/run/</<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:538:11\npromise callback*createRetryer/run/<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:534:10\npromise callback*run@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:517:51\nstart@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:555:9\nfetch@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:969:41\nexecuteFetch_fn@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:2279:51\nonSubscribe@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:1983:74\nsubscribe@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:24:10\nuseBaseQuery/<@http://localhost:5173/node_modules/.vite/deps/@tanstack_react-query.js?v=35a3c4eb:3146:56\nsubscribeToStore@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:4638:16\nreact-stack-bottom-frame@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:17478:20\nrunWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:1487:15\ncommitHookEffectListMount@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:8460:122\ncommitHookPassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:8518:60\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9887:29\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9881:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9881:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9984:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\ncommitPassiveMountOnFiber@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9881:51\nrecursivelyTraversePassiveMountEffects@http://localhost:5173/node_modules/.vite/deps/chunk-FDKUMDXN.js?v=35a3c4eb:9868:38\n",
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "adapter": [
+      "xhr",
+      "http",
+      "fetch"
+    ],
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": {},
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE4ZGY2MmQzYTBhNDRlM2RmY2RjYWZjNmRhMTM4Mzc3NDU5ZjliMDEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTGVhcm5pbmcgRW5nbGlzaCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLcVNpUE1iSWhzSGtLNkZ6VVFVVUdZZTllOGE2TmxoYmhoXzVTUUliY0hVMzBLdVZxRz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS93b3JrZWxldmF0ZS1lMDA0ZiIsImF1ZCI6IndvcmtlbGV2YXRlLWUwMDRmIiwiYXV0aF90aW1lIjoxNzUyNTY4MTc4LCJ1c2VyX2lkIjoiWlhjZFVKWTBkQlFCd2dhTDFXTk1CZ3l4VHU5MiIsInN1YiI6IlpYY2RVSlkwZEJRQndnYUwxV05NQmd5eFR1OTIiLCJpYXQiOjE3NTI1NzUxMTcsImV4cCI6MTc1MjU3ODcxNywiZW1haWwiOiJtZHNoYWhqYWxhbDUxMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjEwMDk1NDUzMTAyMTU1NTQ4NTQzNyJdLCJlbWFpbCI6WyJtZHNoYWhqYWxhbDUxMkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.vJhd_xyca1pRSNZoSLBQKzZn9CkLkt2svvqK9oZwBpBHlDcul1Kqg89QOMhOtk81qVe4Sm2h314D_2L81w4SARfj0x3ikQi1qIES3W14wElBMIYQ4Ht6PPBTy4Q1PEwtNWS0XjORSbNwwJ0dWZczWrFgTHdV5h3XgmYVEM8cmDQBSiTLwEWuwDyyuly4AmHnhG7lJVos4RzYv-Izfs9lgxr3SIuzDF6lkq6ajRPRZk48p5mM6IGeoqeZi01gRGODXo_gW4Hr0otTe9WrwiSRMkm0UQVwb7-klP4n57yT01QiuRGiOZsA-nNQgY5Whd31nCF7SGPIhgS5oRsvoThvRg"
+    },
+    "baseURL": "http://localhost:8000",
+    "method": "get",
+    "url": "/payments",
+    "allowAbsoluteUrls": true
+  },
+  "code": "ERR_BAD_REQUEST",
+  "status": 403
+} PaymentHistory.jsx 25

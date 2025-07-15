@@ -22,6 +22,7 @@ const PaymentHistory = () => {
     },
   });
 
+  console.log(error, "PaymentHistory.jsx", 25);
   if (isLoading) return <Spinner />;
   if (isError) return <Error message={error?.message} retry={refetch} />;
 
