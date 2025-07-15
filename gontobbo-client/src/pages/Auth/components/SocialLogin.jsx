@@ -24,12 +24,13 @@ const SocialLogin = () => {
         timer: 2000,
       });
       const userInfo = {
-        email: user.email,
+        email: user?.email,
         role: "user", // default role
         created_at: new Date().toISOString(),
         last_log_in: new Date().toISOString(),
       };
-      axiosInstance.post("/users", userInfo);
+      const response = await axiosInstance.post("/users", userInfo);
+      console.log(response?.data, "SocialLogin.jsx", 33);
       setTimeout(() => {
         navigate(from, {
           replace: true,

@@ -5,6 +5,7 @@ import useAuth from "../../../hooks/useAuth";
 import SignUpPasswordInputs from "./SignUpPasswordInputs";
 import SocialLogin from "./SocialLogin";
 import { isStrongPassword } from "../../../contexts/AuthContext/auth.helpers";
+import { axiosInstance } from "../../../hooks/useAxiosSecure";
 
 console.log(import.meta.env.VITE_image_upload_key, "imgbb apikey");
 const SignUpForm = () => {
@@ -62,6 +63,14 @@ const SignUpForm = () => {
           displayName: name,
           photoURL,
         });
+        const userInfo = {
+          email: res?.user?.email,
+          role: "user", // default role
+          created_at: new Date().toISOString(),
+          last_log_in: new Date().toISOString(),
+        };
+        const response = await axiosInstance.post("/users", userInfo);
+        console.log(response?.data, "SocialLogin.jsx", 33);
 
         setTimeout(() => {
           navigate("/");
