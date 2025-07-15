@@ -2,7 +2,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { FaEye, FaCheck, FaTimes } from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "../../../../hooks/useAxiosSecure";
+import useAxiosSecure, { axiosInstance } from "../../../../hooks/useAxiosSecure";
 
 const PendingRiders = () => {
   const [selectedRider, setSelectedRider] = useState(null);
@@ -15,7 +15,7 @@ const PendingRiders = () => {
   } = useQuery({
     queryKey: ["pending-riders"],
     queryFn: async () => {
-      const res = await axiosSecure.get("/riders/pending");
+      const res = await axiosInstance.get("/riders/pending");
       return res.data;
     },
   });
