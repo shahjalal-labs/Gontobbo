@@ -67,3 +67,20 @@
 <!-- ![Screenshot](src/assets/screenshots/ss-11-27-45-AM_28-06-25.png) -->
 
 ![Screenshot](src/assets/screenshots/preview/laptopPreview.png)
+
+## last user logged in data
+
+{
+"\_id": {
+"$oid": "68737cc05296c623a0f28a0d"
+},
+"email": "healthcare32q@gmail.com",
+"role": "user",
+"created_at": "2025-07-13T09:30:40.454Z",
+"last_log_in": "2025-07-13T09:30:40.454Z"
+}
+
+### ` I need this 2 datas for later modification`
+
+"$oid": "68737cc05296c623a0f28a0d"
+"last_log_in": "2025-07-13T09:30:40.454Z"

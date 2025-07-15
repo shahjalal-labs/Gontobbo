@@ -5,7 +5,7 @@ import { Facebook, Github } from "lucide-react";
 import { axiosInstance } from "../../../hooks/useAxiosSecure";
 
 const SocialLogin = () => {
-  const { googleSignIn } = useAuth();
+  const { googleSignIn, user } = useAuth();
 
   const navigate = useNavigate();
 
@@ -23,8 +23,13 @@ const SocialLogin = () => {
         showConfirmButton: false,
         timer: 2000,
       });
-
-      axiosInstance.post("/users");
+      const userInfo = {
+        email: user.email,
+        role: "user", // default role
+        created_at: new Date().toISOString(),
+        last_log_in: new Date().toISOString(),
+      };
+      axiosInstance.post("/users", userInfo);
       setTimeout(() => {
         navigate(from, {
           replace: true,
